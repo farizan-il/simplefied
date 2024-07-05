@@ -8,10 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <title>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqErWaXV0hbj0NHvxXPPn4UGIV_6C5oIQ8zBQo-RJjhlU-RqD9dB1O3auDoussV8D4_ZE&usqp=CAU" alt="" srcset="">
-        @yield('head')
-    </title>
+    @yield('head')
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqErWaXV0hbj0NHvxXPPn4UGIV_6C5oIQ8zBQo-RJjhlU-RqD9dB1O3auDoussV8D4_ZE&usqp=CAU">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -49,7 +47,7 @@
                             <ul class="nav">
                                 <form class="d-flex border border-black rounded p-1" role="search">
                                     <input class="me-2 border border-0" type="search" placeholder="Temukan Kursus" aria-label="" style="outline: none;">
-                                    <button class="btn bg-secondaryq" type="submit"><i class="fa text-white fa-search pb-0"></i></button>
+                                    <button class="btn bg-secondary" type="submit"><i class="fa text-white fa-search pb-0"></i></button>
                                 </form> 
                                 <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
                                 <li class="scroll-to-section"><a href="products.html">Jelajahi</a></li>

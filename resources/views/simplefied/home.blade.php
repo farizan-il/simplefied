@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('head')
-    Simplefied | Home
+    <title>Simplefied | Home</title>
 @endsection
 
 @section('content')
@@ -134,9 +134,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course4.png" alt="">
@@ -163,9 +163,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course1.png" alt="">
@@ -192,9 +192,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course2.png" alt="">
@@ -221,9 +221,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course3.png" alt="">
@@ -275,9 +275,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="/detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course5.png" alt="">
@@ -304,9 +304,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course6.png" alt="">
@@ -333,9 +333,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course7.png" alt="">
@@ -362,9 +362,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="assets/images/course8.png" alt="">

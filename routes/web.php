@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('simplefied.home');
+    return view('simplefied.Home');
+});
+
+Route::get('/detail-course', function () {
+    return view('simplefied.DetailCourse');
 });
