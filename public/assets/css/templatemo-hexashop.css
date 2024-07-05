@@ -1325,7 +1325,7 @@ Explore
 #explore .leather,
 #explore .types {
   min-height: 255px;
-  background-color: #f8f8f8;
+  background-color: #ebebeb;
   text-align: center;
   width: 100%;
 }
@@ -1343,7 +1343,7 @@ Explore
 #explore .types span {
   font-size: 14px;
   font-style: italic;
-  color: #aaa;
+  color: #a1a1a1;
   font-weight: 500;
 }
 
