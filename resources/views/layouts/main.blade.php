@@ -8,7 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    @yield('head')
+    <title>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqErWaXV0hbj0NHvxXPPn4UGIV_6C5oIQ8zBQo-RJjhlU-RqD9dB1O3auDoussV8D4_ZE&usqp=CAU" alt="" srcset="">
+        @yield('head')
+    </title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -39,20 +42,20 @@
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
                             <a href="index.html" class="logo">
-                                <span class="text-light bg-dark rounded px-2">Simplefied</span>
+                                <span class="text-dark px-2">Simplefied</span>
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                                <li class="scroll-to-section"><a href="#men">Men's</a></li>
+                                <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
+                                <li class="scroll-to-section"><a href="products.html">Layanan</a></li>
+                                {{-- <li class="scroll-to-section"><a href="#men">Men's</a></li>
                                 <li class="scroll-to-section"><a href="#women">Women's</a></li>
-                                <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                                <li class="scroll-to-section"><a href="#kids">Kid's</a></li> --}}
                                 <li class="submenu">
                                     <a href="javascript:;">Pages</a>
                                     <ul>
                                         <li><a href="about.html">About Us</a></li>
-                                        <li><a href="products.html">Products</a></li>
                                         <li><a href="single-product.html">Single Product</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
@@ -66,7 +69,8 @@
                                         <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                     </ul>
                                 </li>
-                                <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                                <li class="scroll-to-section"><a href="#explore" class="btn btn-outline-light py-0 text-dark">Login</a></li>
+                                <li class="scroll-to-section"><a href="#ex" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
                             </ul>        
                             <a class='menu-trigger'>
                                 <span>Menu</span>

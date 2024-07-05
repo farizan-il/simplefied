@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('head')
-    <title>Simplefied | Home</title>
+    Simplefied | Home
 @endsection
 
 @section('content')
@@ -282,21 +282,23 @@
                                     </div>
                                     <img src="assets/images/course5.png" alt="">
                                 </div>
-                                <h5><strong>Animasi Fundamental terlengkap bagi Pemula</strong></h5>
-                                <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                <ul class="stars-list d-flex gap-3">
-                                    <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
-                                    <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                    <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                    <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                    <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                    <li><i class="fa fa-star text-secondary mr-1"></i></li>
-                                    <li><p class="fs-6 text-secondary mr-1">(6,210)</p></li>
-                                </ul>
-                                <div class="d-flex mt-2">
-                                    <h6 class="fw-6 mr-2"><strong>Rp720.000</strong></h6>
-                                    <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp1.200.000</h6>
-                                </div>  
+                                <div class="down-content">
+                                    <h5><strong>Animasi Fundamental terlengkap bagi Pemula</strong></h5>
+                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
+                                    <ul class="stars-list d-flex gap-3">
+                                        <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-secondary mr-1"></i></li>
+                                        <li><p class="fs-6 text-secondary mr-1">(6,210)</p></li>
+                                    </ul>
+                                    <div class="d-flex mt-2">
+                                        <h6 class="fw-6 mr-2"><strong>Rp720.000</strong></h6>
+                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp1.200.000</h6>
+                                    </div>  
+                                </div>
                             </div>
                             <div class="item">
                                 <div class="thumb">
@@ -310,15 +312,21 @@
                                     <img src="assets/images/course6.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Dress</h4>
-                                    <span>$45.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
+                                    <h5><strong>Animasi Fundamental terlengkap bagi Pemula</strong></h5>
+                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
+                                    <ul class="stars-list d-flex gap-3">
+                                        <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-secondary mr-1"></i></li>
+                                        <li><p class="fs-6 text-secondary mr-1">(6,210)</p></li>
                                     </ul>
+                                    <div class="d-flex mt-2">
+                                        <h6 class="fw-6 mr-2"><strong>Rp720.000</strong></h6>
+                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp1.200.000</h6>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="item">
@@ -333,15 +341,21 @@
                                     <img src="assets/images/course7.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Spring Collection</h4>
-                                    <span>$130.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
+                                    <h5><strong>Belajar Premiere Pro CC 2019 untuk Pemula</strong></h5>
+                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
+                                    <ul class="stars-list d-flex gap-3">
+                                        <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-secondary mr-1"></i></li>
+                                        <li><p class="fs-6 text-secondary mr-1">(6,210)</p></li>
                                     </ul>
+                                    <div class="d-flex mt-2">
+                                        <h6 class="fw-6 mr-2"><strong>Rp920.000</strong></h6>
+                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp1.200.000</h6>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="item">
@@ -356,15 +370,21 @@
                                     <img src="assets/images/course8.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
+                                    <h5><strong>Belajar Premiere Pro CC 2019 untuk Pemula</strong></h5>
+                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
+                                    <ul class="stars-list d-flex gap-3">
+                                        <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                        <li><i class="fa fa-star text-secondary mr-1"></i></li>
+                                        <li><p class="fs-6 text-secondary mr-1">(6,210)</p></li>
                                     </ul>
+                                    <div class="d-flex mt-2">
+                                        <h6 class="fw-6 mr-2"><strong>Rp620.000</strong></h6>
+                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp900.000</h6>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -381,31 +401,26 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
-                        <h2>Explore Our Products</h2>
-                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit
-                            this layout. You can convert this template as any kind of ecommerce CMS theme as you
-                            wish.</span>
+                        <h2>Tingkatkan Kemampuan Tim Anda dengan Simplefied Business</h2>
+                        <p>Akses tak terbatas ke lebih dari 26.000 kursus populer dari Simplefied, kapan saja, di mana saja.</p>
+                        <p>Koleksi kursus internasional dalam 14 bahasa dan sertifikasi terkemuka dalam teknologi dan bisnis.</p>
                         <div class="quote">
                             <i class="fa fa-quote-left"></i>
-                            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <p>Simplefied menyediakan berbagai kursus berkualitas tinggi untuk meningkatkan kemampuan Anda dalam dunia bisnis dan teknologi.</p>
                         </div>
-                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for
-                            absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
-                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow"
-                                href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.
-                            Please also tell your friends about our great website. Thank you.</p>
+                        <p>Daftar sekarang di Simplefied untuk mengakses berbagai kursus berkualitas tinggi dan meningkatkan kemampuan Anda dalam bisnis dan teknologi.</p>
                         <div class="main-border-button">
-                            <a href="products.html">Discover More</a>
+                            <a href="products.html">Temukan Lebih Banyak</a>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="col-lg-6">
                     <div class="right-content">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="leather">
-                                    <h4>Leather Bags</h4>
-                                    <span>Latest Collection</span>
+                                    <h4>Finansial Analisis</h4>
+                                    <span>Topik Terbaru</span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -420,8 +435,8 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="types">
-                                    <h4>Different Types</h4>
-                                    <span>Over 304 Products</span>
+                                    <h4>Cyber Security</h4>
+                                    <span>Topik Terbaru</span>
                                 </div>
                             </div>
                         </div>
