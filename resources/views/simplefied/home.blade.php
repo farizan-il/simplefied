@@ -144,7 +144,7 @@
                                 <div class="down-content">
                                     <h5><strong>Mempelajari Machine Learning dengan Python</strong></h5>
                                     <p class="fs-6 text-secondary">Kode by Hacktiv8</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -173,7 +173,7 @@
                                 <div class="down-content">
                                     <h5><strong>Pengenalan Pembelajaran Mesin (Intro to Machine Learning)</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -202,7 +202,7 @@
                                 <div class="down-content">
                                     <h5><strong>Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2024]</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">5</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -231,7 +231,7 @@
                                 <div class="down-content">
                                     <h5><strong>Complete Machine Learning with R Studio - ML for 2024</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">5</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -285,7 +285,7 @@
                                 <div class="down-content">
                                     <h5><strong>Animasi Fundamental terlengkap bagi Pemula</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -314,7 +314,7 @@
                                 <div class="down-content">
                                     <h5><strong>Animasi Fundamental terlengkap bagi Pemula</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -343,7 +343,7 @@
                                 <div class="down-content">
                                     <h5><strong>Belajar Premiere Pro CC 2019 untuk Pemula</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
@@ -372,7 +372,7 @@
                                 <div class="down-content">
                                     <h5><strong>Belajar Premiere Pro CC 2019 untuk Pemula</strong></h5>
                                     <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3">
+                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
                                         <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>

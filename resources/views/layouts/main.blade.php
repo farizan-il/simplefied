@@ -19,7 +19,34 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-hexashop.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
+    
 
+    <style>
+        .video-wrapper {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-wrapper .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+            display: none;
+            z-index: 1;
+        }
+
+        .video-wrapper:hover .play-icon {
+            display: block;
+        }
+    </style>
     </head>
     
     <body>
@@ -158,9 +185,9 @@
         
         <!-- Global Init -->
         <script src="{{ asset ('assets/js/custom.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
-
             $(function() {
                 var selectedClass = "";
                 $("p").click(function(){
@@ -174,8 +201,39 @@
                     
                 });
             });
-
         </script>
 
+        {{-- script untuk menampilkan video  --}}
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const videoWrappers = document.querySelectorAll('.video-wrapper');
+        
+                videoWrappers.forEach(wrapper => {
+                    const video = wrapper.querySelector('video');
+                    video.pause(); // Ensure video is paused initially
+                    wrapper.querySelector('.play-icon').style.display = 'block';
+        
+                    wrapper.addEventListener('click', function () {
+                        // Stop video playback
+                        video.pause();
+        
+                        // Open modal
+                        const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+                        modal.show();
+                    });
+                });
+        
+                const modalElement = document.getElementById('videoModal');
+                modalElement.addEventListener('shown.bs.modal', function () {
+                    const modalVideo = modalElement.querySelector('video');
+                    modalVideo.play();
+                });
+        
+                modalElement.addEventListener('hidden.bs.modal', function () {
+                    const modalVideo = modalElement.querySelector('video');
+                    modalVideo.pause();
+                });
+            });
+        </script>
     </body>
 </html>
