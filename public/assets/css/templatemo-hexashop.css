@@ -68,7 +68,6 @@ html[xmlns] .clearfix {
 ul, li {
   padding: 0;
   margin: 0;
-  list-style: none;
 }
 
 header, nav, section, article, aside, footer, hgroup {
@@ -153,6 +152,17 @@ body {
   display: inline-block;
   font-weight: 500;
   transition: all .3s;
+}
+
+.total .main-border-button a {
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 25px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all .3s;
+  width: 100%;
 }
 
 .main-border-button a:hover {
@@ -1583,8 +1593,8 @@ Products Page
 }
 
 .page-heading .inner-content {
-  padding: 150px 0px;
-  text-align: center;
+  padding: 100px 0px;
+  text-align: start;
 }
 
 .page-heading .inner-content h2 {
@@ -1838,7 +1848,10 @@ Single Product Page
 }
 
 .total .main-border-button {
-  text-align: right;
+  text-align: center;
+}
+.total .refund  {
+  text-align: center;
 }
 
 .total .main-border-button a {
