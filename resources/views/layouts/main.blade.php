@@ -73,6 +73,12 @@
         }
         /* akhir style untuk show dan close deskripsi */
 
+        .hidden-accordion {
+            display: none;
+        }
+
+
+
     </style>
 
     </head>
@@ -97,9 +103,10 @@
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
                             <a href="index.html" class="logo">
-                                <span class="text-dark px-2">Simplefied</span>
+                                <img src="assets/images/white-logo-nav.png" alt="">
                             </a>
                             <!-- ***** Logo End ***** -->
+
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
                                 <form class="d-flex border border-black rounded p-1" role="search">
@@ -116,7 +123,8 @@
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </li>
-                                <li class="scroll-to-section"><a href="#explore" class="btn btn-outline-light py-0 text-dark">Masuk</a></li>
+                                
+                                <li class="scroll-to-section"><a href="#explore" class="btn border py-0 text-dark">Masuk</a></li>
                                 <li class="scroll-to-section"><a href="#ex" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
                             </ul>        
                             <a class='menu-trigger'>
@@ -139,46 +147,43 @@
                     <div class="col-lg-3">
                         <div class="first-item">
                             <div class="logo">
-                                <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                                <img src="assets/images/white-logo.png" alt="">
                             </div>
                             <ul>
-                                <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                                <li><a href="#">hexashop@company.com</a></li>
-                                <li><a href="#">010-020-0340</a></li>
+                                <li><a href="#">Wisma Nusantara Lt. 0 <br> Jln. MH Thamrin 59 <br> Jakarta 10350 – Indonesia </a></li>
+                                <li><a href="#">farizanilham7@gmail.com</a></li>
+                                <li><a href="#">0813-1771-0744</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <h4>Shopping &amp; Categories</h4>
+                        <h4>Kategori Terpopuler</h4>
                         <ul>
-                            <li><a href="#">Men’s Shopping</a></li>
-                            <li><a href="#">Women’s Shopping</a></li>
-                            <li><a href="#">Kid's Shopping</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">IT dan Software</a></li>
+                            <li><a href="#">Design</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3">
-                        <h4>Useful Links</h4>
+                        <h4>Tautan Berguna</h4>
                         <ul>
-                            <li><a href="#">Homepage</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#">Jelajahi</a></li>
+                            <li><a href="#">Tentang Kami</a></li>
+                            <li><a href="#">Kontak Kami</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3">
-                        <h4>Help &amp; Information</h4>
+                        <h4>Bantuan &amp; Informasi</h4>
                         <ul>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">FAQ's</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Tracking ID</a></li>
+                            <li><a href="#">Bantuan</a></li>
+                            <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-12">
                         <div class="under-footer">
-                            <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
-                            
-                            <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                            <p>Copyright © 2024 Simplefied Co., Ltd. All Rights Reserved.                             
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -279,6 +284,17 @@
                     showMoreBtn.textContent = 'Tampilkan Lebih Sedikit';
                 }
             }
+        </script>
+
+        {{-- script untuk show dan disabled konten kursus --}}
+        <script>
+            document.getElementById('showAllAccordionsBtn').addEventListener('click', function() {
+                var hiddenItems = document.getElementsByClassName('hidden-accordion');
+                for (var i = 0; i < hiddenItems.length; i++) {
+                    hiddenItems[i].style.display = 'block';
+                }
+                this.style.display = 'none'; // Hide the button after showing all items
+            });
         </script>
     </body>
 </html>
