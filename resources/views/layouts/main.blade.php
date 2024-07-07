@@ -23,16 +23,15 @@
 
 
     <style>
+        /* style untuk video */
         .video-wrapper {
             position: relative;
             cursor: pointer;
         }
-
         .video-wrapper video {
             width: 100%;
             height: 100%;
         }
-
         .video-wrapper .play-icon {
             position: absolute;
             top: 50%;
@@ -43,11 +42,39 @@
             display: none;
             z-index: 1;
         }
-
         .video-wrapper:hover .play-icon {
             display: block;
         }
+        /* akhir style untuk video */
+
+
+        /* style untuk show dan close deskripsi */
+        .text-wrapper {
+            position: relative;
+            max-height: 260px;
+            overflow: hidden;
+            
+        }
+        .text-wrapper::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10rem; 
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        }
+        .text-wrapper.show-more {
+            max-height: none;
+        }
+        .text-wrapper.show-more::after {
+            display: none;
+            font-weight: bold;
+        }
+        /* akhir style untuk show dan close deskripsi */
+
     </style>
+
     </head>
     
     <body>
@@ -186,6 +213,7 @@
         
         <!-- Global Init -->
         <script src="{{ asset ('assets/js/custom.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
@@ -235,6 +263,22 @@
                     modalVideo.pause();
                 });
             });
+        </script>
+
+        {{-- script untuk show deskripsi dan close --}}
+        <script>
+            function toggleText() {
+                var textWrapper = document.querySelector('.text-wrapper');
+                var showMoreBtn = document.querySelector('.btn-desc');
+
+                if (textWrapper.classList.contains('show-more')) {
+                    textWrapper.classList.remove('show-more');
+                    showMoreBtn.textContent = 'Tampilkan Lebih Banyak';
+                } else {
+                    textWrapper.classList.add('show-more');
+                    showMoreBtn.textContent = 'Tampilkan Lebih Sedikit';
+                }
+            }
         </script>
     </body>
 </html>
