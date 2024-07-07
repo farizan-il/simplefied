@@ -12,6 +12,7 @@
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqErWaXV0hbj0NHvxXPPn4UGIV_6C5oIQ8zBQo-RJjhlU-RqD9dB1O3auDoussV8D4_ZE&usqp=CAU">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-8l7+3pC3Rn88+qLZTzTnOMpOjJcbwXl0J8Dcy8F4yLQ8x1hVp7zgf8wJmF0t8kUSk/HaKog5vBAlMl8ST4uG/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-hexashop.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
-    
+
 
     <style>
         .video-wrapper {

@@ -48,6 +48,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="right-content">
+                        {{-- benefit kursus --}}
                         <div class="border p-3">
                             <h4>Yang akan Anda Pelajari</h4>
                             <div class="d-flex mt-3">
@@ -62,8 +63,9 @@
                             </div>
                         </div>
 
-                        <div class="border p-3 mt-4">
-                            <h5>Persyaratan Sebelum Menjalani Kursus</h5>
+                        {{-- syarat kursus --}}
+                        <div class="border p-3 mt-4 mb-4">
+                            <h5><strong>Persyaratan Sebelum Menjalani Kursus</strong></h5>
                             <div class="d-flex mt-3">
                                 <ul class="list-unstyled">
                                     <li class="p-1"><i class="fa fa-check-circle text-secondary mr-4"></i> Menguasai Bahasa Pemrograman JavaScript</li>
@@ -78,8 +80,335 @@
                             <p class="text-dark mt-0"><strong>Berbagai perusahaan terpopuler menawarkan kursus ini kepada karyawannya</strong><br>Kursus ini dipilih untuk koleksi kursus berperingkat teratas kami yang dipercaya oleh bisnis di seluruh </p>
                         </div>
 
-                        <span class="price">$75.00</span>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
+                        <h4 class="mb-1">Konten Kursus</h4>
+                        <span class="mt-0">13 bagian • 294 pelajaran • 27j 22m total durasi</span>
+                        <div class="mt-3">
+                            <div class="accordion enable-rounded" id="accordionPanelsStayOpenExample" style="width: 100%">
+                                {{-- list acordion task kursus --}}
+                                <div class="accordion-item enable-rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button d-flex justify-content-between mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                            <span class="text-dark fs-6 mr-4 mt-0"><strong>NodeJS Dasar</strong></span>
+                                            <span class="text-secondary mt-0">294 pelajaran • 27j 22m</span>
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="p-1 d-flex justify-content-between mt-2" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- example aja --}}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button d-flex justify-content-between mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                            <span class="text-dark fs-6 mr-4 mt-0"><strong>NodeJS Dasar</strong></span>
+                                            <span class="text-secondary mt-0">294 pelajaran • 27j 22m</span>
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="p-1 d-flex justify-content-between mt-2" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button d-flex justify-content-between mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                                            <span class="text-dark fs-6 mr-4 mt-0"><strong>NodeJS Dasar</strong></span>
+                                            <span class="text-secondary mt-0">294 pelajaran • 27j 22m</span>
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="p-1 d-flex justify-content-between mt-2" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button d-flex justify-content-between mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                                            <span class="text-dark fs-6 mr-4 mt-0"><strong>NodeJS Dasar</strong></span>
+                                            <span class="text-secondary mt-0">294 pelajaran • 27j 22m</span>
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="p-1 d-flex justify-content-between mt-2" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 d-flex justify-content-between mt-3" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Menguasai Bahasa Pemrograman JavaScript
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                                <li class="p-1 mt-3 d-flex justify-content-between" style="font-size: 14px">
+                                                    <span class="text-dark p-0 m-0">
+                                                        <i class="fa fa-file-video-o text-dark mr-3"></i> 
+                                                        Mengetahui Fundamental HTML dan CSS
+                                                    </span>
+                                                    <span class="p-0 m-0">04:13</span>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="total">
+                                <div class="main-border-button button-hover mt-2"><a href="#" style="font-size: 15px"><strong>Tampilkan Semuanya</strong></a></div>
+                            </div>
+                        </div>
+
+
+                        <span class="price mb-0">$75.00</span>
+                        <span class="mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
                         <div class="quote">
                             <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
                         </div>
@@ -95,10 +424,12 @@
                         </div>
                         <div class="total">
                             <h4>Total: $210.00</h4>
-                            <div class="main-border-button"><a href="#">Add To Cart</a></div>
+                            <div class="main-border-button button-hover"><a href="#">Add To Cart</a></div>
                         </div>
                     </div>
                 </div>
+
+                {{-- card pembelian kursus --}}
                 <div class="col-lg-4 shadow p-3 mt-0">
                     <div class="left-images">
                         <div class="video-wrapper embed-responsive embed-responsive-16by9 mb-3" data-bs-toggle="modal" data-bs-target="#videoModal">
@@ -108,9 +439,9 @@
                         <div class="down-content">
                             <h3><strong>Rp650.000</strong></h3>
                             <div class="total mt-3">
-                                <div class="main-border-button"><a href="#" style="font-size: 15px"><strong>Beli sekarang</strong></a></div>
+                                <div class="main-border-button button-hover"><a href="#" style="font-size: 15px"><strong>Beli sekarang</strong></a></div>
                                 <div class="main-border-button mt-2 bg-dark"><a href="#" style="font-size: 15px"><strong class="text-white">Tambahkan ke keranjang</strong></a></div>
-                                <p class="refund fs-6 text-secondary mt-2">jaminan uang kembali 30 hari</p>
+                                <p class="refund text-secondary mt-2" style="font-size: 12px">jaminan uang kembali 30 hari</p>
                             </div>
                             <div class="mt-4">
                                 <h6 class="fw-6 mr-2"><strong>Kursi Ini Mencakup :</strong></h6>
@@ -132,7 +463,7 @@
                                 <h6 class="fw-6 mr-2"><strong>Melatih 5 orang atau lebih?</strong></h6>
                                 <p>Dapatkan akses untuk tim Anda ke 26.000+ kursus terbaik Simplefied, kapan saja dan di mana saja.</p>
                                 <div class="total mt-1">
-                                    <div class="main-border-button"><a href="#" style="font-size: 13px"><strong>Coba Simplefied Plus</strong></a></div>
+                                    <div class="main-border-button button-hover"><a href="#" style="font-size: 13px"><strong>Coba Simplefied Plus</strong></a></div>
                                 </div>
                             </div>
                         </div>

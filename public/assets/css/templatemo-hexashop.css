@@ -166,8 +166,7 @@ body {
 }
 
 .main-border-button a:hover {
-  background-color: #fff;
-  color: #2a2a2a;
+  background-color: #2a2a2a;
 }
 
 .main-white-button a {
@@ -1859,9 +1858,8 @@ Single Product Page
   color: #2a2a2a;
 }
 
-.total .main-border-button a:hover {
-  color: #fff;
-  background-color: #2a2a2a;
+.button-hover a:hover {
+  background-color: #d6d6d6;
 }
 
 .quantity {

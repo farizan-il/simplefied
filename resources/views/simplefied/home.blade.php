@@ -151,7 +151,7 @@
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-warning mr-1"></i></li>
                                         <li><i class="fa fa-star text-secondary mr-1"></i></li>
-                                        <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li> //jumlah pendaftar
+                                        <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li>
                                     </ul>
                                     <div class="d-flex mt-2">
                                         <h6 class="fw-6 mr-2"><strong>Rp620.000</strong></h6>
