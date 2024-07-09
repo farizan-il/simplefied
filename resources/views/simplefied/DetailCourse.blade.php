@@ -7,7 +7,7 @@
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
     <div class="page-heading" id="top">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
@@ -661,6 +661,43 @@
                         </div>
                         <button class="btn btn-desc btn-outline-light mt-2 p-0 text-primary" onclick="toggleText()" style="font-size: 13px; font-weight: bold">Tampilkan Lebih Banyak</button>
 
+                        <h4 class="mt-4">Peserta juga membeli</h4>
+                            <div class="course-container row align-items-center">
+                                <div class="col-auto">
+                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image" width="50px">
+                                </div>
+                                <div class="col">
+                                    <h6 class="mb-1">Pelatihan Data Science dan Machine Learning Dengan Python</h6>
+                                    <small class="text-muted">8,5 total jam • Diperbarui 12/2023</small>
+                                    <div class="d-flex align-items-center mb-1">
+                                        <span class="course-rating me-2">5.0 <i class="fa fa-star text-warning mr-1"></i></span>
+                                        <span class="me-2">532</span>
+                                        <span class="course-price">Rp129.000</span>
+                                        <span class="course-discounted-price ms-2">Rp449.000</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-heart favorite-icon"></i>
+                                </div>
+                            </div>
+                            <div class="course-container row align-items-center">
+                                <div class="col-auto">
+                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image" width="50px">
+                                </div>
+                                <div class="col">
+                                    <h6 class="mb-1">Bootcamp Lengkap Data Science 2022</h6>
+                                    <div class="d-flex align-items-center mb-1">
+                                        <span class="course-rating me-2">4.5 <i class="bi bi-star-fill"></i></span>
+                                        <span class="me-2">171</span>
+                                        <span class="course-price">Rp129.000</span>
+                                        <span class="course-discounted-price ms-2">Rp449.000</span>
+                                    </div>
+                                    <small class="text-muted">28,5 total jam • Diperbarui 7/2022</small>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-heart favorite-icon"></i>
+                                </div>
+                            </div>
 
                         {{-- <span class="price mb-0">$75.00</span> --}}
                         <span class="mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
@@ -692,7 +729,7 @@
                             <div class="play-icon">▶</div>
                         </div>
                         <div class="down-content">
-                            <span class="fw-bold d-inline" style="font-size: 26px"><sup>Rp</sup>0</span>
+                            <span class="fw-bold d-inline" style="font-size: 26px"><sup>Rp</sup>529.000</span>
                             <span class="text-secondary" style="text-decoration: line-through; font-size: 14px">Rp1.200.000</span>
                             <div class="total mt-3">
                                 <div class="main-border-button bg-dark"><a href="#" style="font-size: 15px"><strong class="text-white">Tambahkan ke keranjang</strong></a></div>

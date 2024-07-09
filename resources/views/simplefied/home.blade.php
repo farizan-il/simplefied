@@ -115,7 +115,7 @@
 
     <!-- ***** Tepok Unggulan Starts ***** -->
     <section class="section" id="men">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="men-item-carousel">
@@ -256,7 +256,7 @@
 
     <!-- ***** topik unggulan Starts ***** -->
     <section class="section" id="women">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
@@ -266,7 +266,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="women-item-carousel">
@@ -397,7 +397,7 @@
 
     <!-- ***** Explore Area Starts ***** -->
     <section class="section" id="explore">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
@@ -449,7 +449,7 @@
 
     <!-- ***** Social Area Starts ***** -->
     <section class="section" id="social">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
@@ -459,7 +459,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-xxl">
             <div class="row images align-items-center">
                 <div class="col-2">
                     <div class="thumb">
@@ -498,7 +498,7 @@
 
     <!-- ***** Subscribe Area Starts ***** -->
     <div class="subscribe">
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="section-heading">

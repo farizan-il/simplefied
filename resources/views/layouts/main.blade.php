@@ -77,6 +77,34 @@
             display: none;
         }
 
+        /* style untuk rekomendasi kursus */
+        .course-container {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .course-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .course-rating {
+            color: #ff9800;
+        }
+        .course-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .course-discounted-price {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .favorite-icon {
+            font-size: 1.5rem;
+            color: #aaa;
+        }
+    </style>
+
 
 
     </style>
@@ -84,117 +112,118 @@
     </head>
     
     <body>
-        
-        <!-- ***** Preloader Start ***** -->
-        <div id="preloader">
-            <div class="jumper">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>  
-        <!-- ***** Preloader End ***** -->
-        
-        <!-- ***** Header Area Start ***** -->
-        <header class="header-area header-sticky">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="main-nav">
-                            <!-- ***** Logo Start ***** -->
-                            <a href="index.html" class="logo">
-                                <img src="assets/images/white-logo-nav.png" alt="">
-                            </a>
-                            <!-- ***** Logo End ***** -->
 
-                            <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <form class="d-flex border border-black rounded p-1" role="search">
-                                    <input class="me-2 border border-0" type="search" placeholder="Temukan Kursus" aria-label="" style="outline: none;">
-                                    <button class="btn bg-secondary" type="submit"><i class="fa text-white fa-search pb-0"></i></button>
-                                </form> 
-                                <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                                <li class="scroll-to-section"><a href="products.html">Jelajahi</a></li>
-                                <li class="submenu">
-                                    <a href="javascript:;">Pages</a>
-                                    <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li class="scroll-to-section"><a href="#explore" class="btn border py-0 text-dark">Masuk</a></li>
-                                <li class="scroll-to-section"><a href="#ex" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
-                            </ul>        
-                            <a class='menu-trigger'>
-                                <span>Menu</span>
-                            </a>
-                            <!-- ***** Menu End ***** -->
-                        </nav>
+            <!-- ***** Preloader Start ***** -->
+            <div id="preloader">
+                <div class="jumper">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>  
+            <!-- ***** Preloader End ***** -->
+            
+            <!-- ***** Header Area Start ***** -->
+            <header class="header-area header-sticky">
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav class="main-nav">
+                                <!-- ***** Logo Start ***** -->
+                                <a href="index.html" class="logo">
+                                    <img src="assets/images/white-logo-nav.png" alt="">
+                                </a>
+                                <!-- ***** Logo End ***** -->
+
+                                <!-- ***** Menu Start ***** -->
+                                <ul class="nav">
+                                    <form class="d-flex border border-black rounded p-1" role="search">
+                                        <input class="me-2 border border-0" type="search" placeholder="Temukan Kursus" aria-label="" style="outline: none;">
+                                        <button class="btn bg-secondary" type="submit"><i class="fa text-white fa-search pb-0"></i></button>
+                                    </form> 
+                                    <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
+                                    <li class="scroll-to-section"><a href="products.html">Jelajahi</a></li>
+                                    <li class="submenu">
+                                        <a href="javascript:;">Pages</a>
+                                        <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="single-product.html">Single Product</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="scroll-to-section"><a href="#explore" class="btn border py-0 text-dark">Masuk</a></li>
+                                    <li class="scroll-to-section"><a href="#ex" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
+                                </ul>        
+                                <a class='menu-trigger'>
+                                    <span>Menu</span>
+                                </a>
+                                <!-- ***** Menu End ***** -->
+                            </nav>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <!-- ***** Header Area End ***** -->
-        
-        @yield('content')
-        
-        <!-- ***** Footer Start ***** -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="first-item">
-                            <div class="logo">
-                                <img src="assets/images/white-logo.png" alt="">
+            </header>
+            <!-- ***** Header Area End ***** -->
+            
+            @yield('content')
+            
+            <!-- ***** Footer Start ***** -->
+            <footer>
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="first-item">
+                                <div class="logo">
+                                    <img src="assets/images/white-logo.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><a href="#">Wisma Nusantara Lt. 0 <br> Jln. MH Thamrin 59 <br> Jakarta 10350 – Indonesia </a></li>
+                                    <li><a href="#">farizanilham7@gmail.com</a></li>
+                                    <li><a href="#">0813-1771-0744</a></li>
+                                </ul>
                             </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>Kategori Terpopuler</h4>
                             <ul>
-                                <li><a href="#">Wisma Nusantara Lt. 0 <br> Jln. MH Thamrin 59 <br> Jakarta 10350 – Indonesia </a></li>
-                                <li><a href="#">farizanilham7@gmail.com</a></li>
-                                <li><a href="#">0813-1771-0744</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">IT dan Software</a></li>
+                                <li><a href="#">Design</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4>Kategori Terpopuler</h4>
-                        <ul>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">IT dan Software</a></li>
-                            <li><a href="#">Design</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4>Tautan Berguna</h4>
-                        <ul>
-                            <li><a href="#">Beranda</a></li>
-                            <li><a href="#">Jelajahi</a></li>
-                            <li><a href="#">Tentang Kami</a></li>
-                            <li><a href="#">Kontak Kami</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4>Bantuan &amp; Informasi</h4>
-                        <ul>
-                            <li><a href="#">Bantuan</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="under-footer">
-                            <p>Copyright © 2024 Simplefied Co., Ltd. All Rights Reserved.                             
+                        <div class="col-lg-3">
+                            <h4>Tautan Berguna</h4>
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="#">Beranda</a></li>
+                                <li><a href="#">Jelajahi</a></li>
+                                <li><a href="#">Tentang Kami</a></li>
+                                <li><a href="#">Kontak Kami</a></li>
                             </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>Bantuan &amp; Informasi</h4>
+                            <ul>
+                                <li><a href="#">Bantuan</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="under-footer">
+                                <p>Copyright © 2024 Simplefied Co., Ltd. All Rights Reserved.                             
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+
         
 
         <!-- jQuery -->
