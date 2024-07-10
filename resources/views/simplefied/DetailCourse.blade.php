@@ -662,42 +662,81 @@
                         <button class="btn btn-desc btn-outline-light mt-2 p-0 text-primary" onclick="toggleText()" style="font-size: 13px; font-weight: bold">Tampilkan Lebih Banyak</button>
 
                         <h4 class="mt-4">Peserta juga membeli</h4>
-                            <div class="course-container row align-items-center">
-                                <div class="col-auto">
-                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image" width="50px">
-                                </div>
-                                <div class="col">
-                                    <h6 class="mb-1">Pelatihan Data Science dan Machine Learning Dengan Python</h6>
-                                    <small class="text-muted">8,5 total jam • Diperbarui 12/2023</small>
-                                    <div class="d-flex align-items-center mb-1">
-                                        <span class="course-rating me-2">5.0 <i class="fa fa-star text-warning mr-1"></i></span>
-                                        <span class="me-2">532</span>
-                                        <span class="course-price">Rp129.000</span>
-                                        <span class="course-discounted-price ms-2">Rp449.000</span>
+                        <div class="course-container row align-items-center">
+                            <div class="row justify-content-between">
+                                <div class="col-7 d-flex">
+                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image mr-2" width="50px">
+                                    <div class="desc-course">
+                                        <h6 class="mb-1"><strong>Pelatihan Data Science dan Machine Learning Dengan Python</strong></h6>
+                                        <small class="text-muted"><strong class="text-success">8,5 total jam</strong> • Diperbarui 12/2023</small>
                                     </div>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="bi bi-heart favorite-icon"></i>
-                                </div>
-                            </div>
-                            <div class="course-container row align-items-center">
-                                <div class="col-auto">
-                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image" width="50px">
-                                </div>
-                                <div class="col">
-                                    <h6 class="mb-1">Bootcamp Lengkap Data Science 2022</h6>
-                                    <div class="d-flex align-items-center mb-1">
-                                        <span class="course-rating me-2">4.5 <i class="bi bi-star-fill"></i></span>
-                                        <span class="me-2">171</span>
-                                        <span class="course-price">Rp129.000</span>
-                                        <span class="course-discounted-price ms-2">Rp449.000</span>
+                                <div class="col-5 d-flex justify-content-between">
+                                    <div class="d-flex align-items-top mb-1 ">
+                                        <span class="course-rating mr-3 text-dark mt-0">5.0 <i class="fa fa-star text-warning mr-1"></i></span>
+                                        <span class="text-dark mt-0 mr-4"><i class="fa fa-user text-secondary"></i> 532</span>
+                                        <div class="price-diskon">
+                                            <span class="course-price text-dark mt-0 p-0"><strong>Rp129.000</strong></span>
+                                            <small class="course-discounted-price">Rp449.000</small>
+                                        </div>
                                     </div>
-                                    <small class="text-muted">28,5 total jam • Diperbarui 7/2022</small>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="bi bi-heart favorite-icon"></i>
+                                    <div class="favorite">
+                                        <i class="fa fa-heart fs-2 text-secondary "></i>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="course-container row align-items-center">
+                            <div class="row justify-content-between">
+                                <div class="col-7 d-flex">
+                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image mr-2" width="50px">
+                                    <div class="desc-course">
+                                        <h6 class="mb-1"><strong>Pelatihan Data Science dan Machine Learning Dengan Python</strong></h6>
+                                        <small class="text-muted"><strong class="text-success">8,5 total jam</strong> • Diperbarui 12/2023</small>
+                                    </div>
+                                </div>
+                                <div class="col-5 d-flex justify-content-between">
+                                    <div class="d-flex align-items-top mb-1 ">
+                                        <span class="course-rating mr-3 text-dark mt-0">5.0 <i class="fa fa-star text-warning mr-1"></i></span>
+                                        <span class="text-dark mt-0 mr-4"><i class="fa fa-user text-secondary"></i> 532</span>
+                                        <div class="price-diskon">
+                                            <span class="course-price text-dark mt-0 p-0"><strong>Rp129.000</strong></span>
+                                            <small class="course-discounted-price">Rp449.000</small>
+                                        </div>
+                                    </div>
+                                    <div class="favorite">
+                                        <i class="fa fa-heart fs-2 text-secondary "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-container row align-items-center">
+                            <div class="row justify-content-between">
+                                <div class="col-7 d-flex">
+                                    <img src="assets/images/course4.png" alt="Course Image" class="course-image mr-2" width="50px">
+                                    <div class="desc-course">
+                                        <h6 class="mb-1"><strong>Pelatihan Data Science dan Machine Learning Dengan Python</strong></h6>
+                                        <small class="text-muted"><strong class="text-success">8,5 total jam</strong> • Diperbarui 12/2023</small>
+                                    </div>
+                                </div>
+                                <div class="col-5 d-flex justify-content-between">
+                                    <div class="d-flex align-items-top mb-1 ">
+                                        <span class="course-rating mr-3 text-dark mt-0">5.0 <i class="fa fa-star text-warning mr-1"></i></span>
+                                        <span class="text-dark mt-0 mr-4"><i class="fa fa-user text-secondary"></i> 532</span>
+                                        <div class="price-diskon">
+                                            <span class="course-price text-dark mt-0 p-0"><strong>Rp129.000</strong></span>
+                                            <small class="course-discounted-price">Rp449.000</small>
+                                        </div>
+                                    </div>
+                                    <div class="favorite">
+                                        <i class="fa fa-heart fs-2 text-secondary "></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <div class="main-border-button button-hover mt-2" id="showAllAccordionsBtn"><a style="font-size: 15px"><strong>Tampilkan Semuanya</strong></a></div>
+                        </div>
 
                         {{-- <span class="price mb-0">$75.00</span> --}}
                         <span class="mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
