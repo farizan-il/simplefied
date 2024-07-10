@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/detail-course', function () {
     return view('simplefied.DetailCourse');
 });
+
+Route::get('/payment-course', function () {
+    return view('simplefied.PaymentCourse');
+});
