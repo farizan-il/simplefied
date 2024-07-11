@@ -737,26 +737,6 @@
                         <div class="total">
                             <div class="main-border-button button-hover mt-2" id="showAllAccordionsBtn"><a style="font-size: 15px"><strong>Tampilkan Semuanya</strong></a></div>
                         </div>
-
-                        {{-- <span class="price mb-0">$75.00</span> --}}
-                        <span class="mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
-                        <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
-                        </div>
-                        <div class="quantity-content">
-                            <div class="left-content">
-                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</h6>
-                            </div>
-                            <div class="right-content">
-                                <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="total">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</h4>
-                            <div class="main-border-button button-hover"><a href="#">Lorem ipsum</a></div>
-                        </div>
                     </div>
                 </div>
 
