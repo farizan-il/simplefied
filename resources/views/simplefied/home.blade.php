@@ -130,122 +130,37 @@
                 <div class="col-lg-12">
                     <div class="men-item-carousel">
                         <div class="owl-men-item owl-carousel">
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
+                            @foreach ($kursus as $item)
+                                <div class="item">
+                                    <div class="thumb">
+                                        <div class="hover-content">
+                                            <ul>
+                                                <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $item->foto }}" alt="">
                                     </div>
-                                    <img src="assets/images/course4.png" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h5><strong>Mempelajari Machine Learning dengan Python</strong></h5>
-                                    <p class="fs-6 text-secondary">Kode by Hacktiv8</p>
-                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
-                                        <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-secondary mr-1"></i></li>
-                                        <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li>
-                                    </ul>
-                                    <div class="d-flex mt-2">
-                                        <h6 class="fw-6 mr-2"><strong>Rp620.000</strong></h6>
-                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp920.000</h6>
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <div class="down-content">
+                                        <h5><strong>{{ $item->title }}</strong></h5>
+                                        <p class="fs-6 text-secondary">{{ $item->instruktur }}</p>
+                                        <ul class="stars-list d-flex gap-3" style="list-style: none">
+                                            <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
+                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                            <li><i class="fa fa-star text-secondary mr-1"></i></li>
+                                            <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li>
                                         </ul>
+                                        <div class="d-flex mt-2">
+                                            <h6 class="fw-6 mr-2"><strong>Rp{{ number_format($item->harga, 0, ',', '.') }}</strong></h6>
+                                            <h6 class="fw-6 text-secondary" style="text-decoration: line-through">{{ $item->harga/0.2 }}</h6>
+                                        </div>                                    
                                     </div>
-                                    <img src="assets/images/course1.png" alt="">
                                 </div>
-                                <div class="down-content">
-                                    <h5><strong>Pengenalan Pembelajaran Mesin (Intro to Machine Learning)</strong></h5>
-                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
-                                        <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-secondary mr-1"></i></li>
-                                        <li><p class="fs-6 text-secondary mr-1">(26,210)</p></li>
-                                    </ul>
-                                    <div class="d-flex mt-2">
-                                        <h6 class="fw-6 mr-2"><strong>Rp720.000</strong></h6>
-                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp1.200.000</h6>
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/course2.png" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h5><strong>Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2024]</strong></h5>
-                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
-                                        <li><p class="fs-6 fw-semibold mr-1">5</p></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><p class="fs-6 text-secondary mr-1">(26,210)</p></li>
-                                    </ul>
-                                    <div class="d-flex mt-2">
-                                        <h6 class="fw-6 mr-2"><strong>Rp520.000</strong></h6>
-                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp890.000</h6>
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/course3.png" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <h5><strong>Complete Machine Learning with R Studio - ML for 2024</strong></h5>
-                                    <p class="fs-6 text-secondary">Ilham Farizan</p>
-                                    <ul class="stars-list d-flex gap-3" style="list-style: none">
-                                        <li><p class="fs-6 fw-semibold mr-1">5</p></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                        <li><p class="fs-6 text-secondary mr-1">(6,210)</p></li>
-                                    </ul>
-                                    <div class="d-flex mt-2">
-                                        <h6 class="fw-6 mr-2"><strong>Rp420.000</strong></h6>
-                                        <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp790.000</h6>
-                                    </div>                                    
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

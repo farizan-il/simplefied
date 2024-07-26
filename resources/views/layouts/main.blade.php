@@ -131,7 +131,7 @@
                             <nav class="main-nav">
                                 <!-- ***** Logo Start ***** -->
                                 <a href="index.html" class="logo">
-                                    <img src="assets/images/white-logo-nav.png" alt="">
+                                    <img src="assets/images/white-logo-nav.png" alt="" width="200px">
                                 </a>
                                 <!-- ***** Logo End ***** -->
 
