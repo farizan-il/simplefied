@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kegiatan;
+use App\Models\DetailModul;
+use App\Models\Modul;
 use Illuminate\Http\Request;
 
-class BerandaController extends Controller
+class SimplefiedController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class BerandaController extends Controller
     {
         $kegiatan = Kegiatan::with('kategori')->get();
         return view('simplefied.home', [
-            'title' => 'Beranda',
+            'title' => 'Simplefied | Home',
             'kursus' => $kegiatan
         ]);
     }
@@ -48,7 +50,15 @@ class BerandaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $kegiatan = Kegiatan::with('kategori')->find($id);
+        $modul = Modul::all();
+        $submodul = DetailModul::all();
+        return view('simplefied.DetailCourse', [
+            'title' => 'Simplefied | Home',
+            'kursus' => $kegiatan,
+            'modul' => $modul,
+            'submodul' => $submodul
+        ]);
     }
 
     /**

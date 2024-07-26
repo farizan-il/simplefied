@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\SimplefiedController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', BerandaController::class);
+Route::resource('/', SimplefiedController::class);
+Route::resource('/simplefied', SimplefiedController::class);
 
 Route::get('/detail-course', function () {
     return view('simplefied.DetailCourse');

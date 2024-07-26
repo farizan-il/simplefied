@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('head')
-    <title>Simplefied | Home</title>
+    <title>{{ $title }}</title>
 @endsection
 
 @section('content')
@@ -131,35 +131,37 @@
                     <div class="men-item-carousel">
                         <div class="owl-men-item owl-carousel">
                             @foreach ($kursus as $item)
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="detail-course"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
+                                @if ($item->kategori->namaKategori == 'Teknologi Informasi')
+                                    <div class="item">
+                                        <div class="thumb">
+                                            <div class="hover-content">
+                                                <ul>
+                                                    <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
+                                                    <li><a href="{{ route('simplefied.edit', $item->id) }}"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $item->foto }}" alt="">
                                         </div>
-                                        <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $item->foto }}" alt="">
+                                        <div class="down-content">
+                                            <h5><strong>{{ $item->title }}</strong></h5>
+                                            <p class="fs-6 text-secondary">{{ $item->kategori->namaKategori }}</p>
+                                            <ul class="stars-list d-flex gap-3" style="list-style: none">
+                                                <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
+                                                <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                                <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                                <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                                <li><i class="fa fa-star text-warning mr-1"></i></li>
+                                                <li><i class="fa fa-star text-secondary mr-1"></i></li>
+                                                <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li>
+                                            </ul>
+                                            <div class="d-flex mt-2">
+                                                <h6 class="fw-6 mr-2"><strong>Rp{{ number_format($item->harga-($item->harga*50/100), 0, ',', '.') }}</strong></h6>
+                                                <h6 class="fw-6 text-secondary" style="text-decoration: line-through">Rp{{ number_format($item->harga, 0, ',', '.') }}</h6>
+                                            </div>                                    
+                                        </div>
                                     </div>
-                                    <div class="down-content">
-                                        <h5><strong>{{ $item->title }}</strong></h5>
-                                        <p class="fs-6 text-secondary">{{ $item->instruktur }}</p>
-                                        <ul class="stars-list d-flex gap-3" style="list-style: none">
-                                            <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
-                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                            <li><i class="fa fa-star text-warning mr-1"></i></li>
-                                            <li><i class="fa fa-star text-secondary mr-1"></i></li>
-                                            <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li>
-                                        </ul>
-                                        <div class="d-flex mt-2">
-                                            <h6 class="fw-6 mr-2"><strong>Rp{{ number_format($item->harga, 0, ',', '.') }}</strong></h6>
-                                            <h6 class="fw-6 text-secondary" style="text-decoration: line-through">{{ $item->harga/0.2 }}</h6>
-                                        </div>                                    
-                                    </div>
-                                </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
