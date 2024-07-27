@@ -87,49 +87,61 @@
                     </div>
 
                     <div class="col-md-7 col-lg-5 col-xl-6 offset-xl-1 ">
+                        @if (session()->has('error'))
+                            <div class="alert mb-4 alert-success alert-dismissible fade show" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger mb-4 alert-dismissible fade show" role="alert">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
                         <div class="shadow p-3 mb-5 bg-body rounded">
-                            <form class="row g-3">
-    
-                                {{-- form email --}}
+                            <form class="row g-3" action="/register" method="POST">
+                                @csrf
+                            
                                 <div class="col-md-6">
                                     <label for="inputEmail4" class="form-label" style="font-size: 14px">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Masukan Email Anda">
+                                    <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Masukan Email Anda">
                                 </div>
-    
-                                {{-- form Username --}}
+                            
                                 <div class="col-md-6">
-                                    <label for="inputPassword4" class="form-label" style="font-size: 14px">Username</label>
-                                    <input type="text" class="form-control" id="inputPassword4" placeholder="Masukan Username Anda">
+                                    <label for="inputUsername" class="form-label" style="font-size: 14px">Username</label>
+                                    <input type="text" class="form-control" id="inputUsername" name="username" placeholder="Masukan Username Anda">
                                 </div>
-    
-                                {{-- form nama lengkap --}}
+                            
                                 <div class="col-12">
                                     <label for="inputNama" class="form-label" style="font-size: 14px">Nama Lengkap</label>
-                                    <input type="text" class="form-control" id="inputNama" placeholder="Masukan Nama Lengkap">
+                                    <input type="text" class="form-control" id="inputNama" name="nama" placeholder="Masukan Nama Lengkap">
                                 </div>
-    
-                                {{-- form password --}}
+                            
                                 <div class="col-12">
-                                    <label for="inputAddress2" class="form-label" style="font-size: 14px">Kata Sandi</label>
-                                    <input type="password" class="form-control" id="inputAddress2" placeholder="Masukan Kata Sandi Anda">
+                                    <label for="inputPassword" class="form-label" style="font-size: 14px">Kata Sandi</label>
+                                    <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Masukan Kata Sandi Anda">
                                 </div>
-    
-                                {{-- konfimasi kata sandi --}}
+                            
                                 <div class="col-md-8">
-                                    <label for="inputCity" class="form-label" style="font-size: 14px">Konfirmasi Kata Sandi</label>
-                                    <input type="password" class="form-control" id="inputCity">
+                                    <label for="inputConfirmPassword" class="form-label" style="font-size: 14px">Konfirmasi Kata Sandi</label>
+                                    <input type="password" class="form-control" id="inputConfirmPassword" name="password_confirmation">
                                 </div>
-    
-                                {{-- Form jenis kelamin --}}
+                            
                                 <div class="col-md-4">
-                                    <label for="inputState" class="form-label" style="font-size: 14px">Jenis Kelamin</label>
-                                    <select id="inputState" class="form-select">
+                                    <label for="inputGender" class="form-label" style="font-size: 14px">Jenis Kelamin</label>
+                                    <select id="inputGender" class="form-select" name="jenisKelamin">
                                         <option selected>-- pilih --</option>
-                                        <option>Pria</option>
-                                        <option>Wanita</option>
+                                        <option value="Pria">Pria</option>
+                                        <option value="Wanita">Wanita</option>
                                     </select>
                                 </div>
-    
+                            
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-dark btn-md btn-block">DAFTAR</button>
                                     <div class="divider d-flex align-items-center my-4">

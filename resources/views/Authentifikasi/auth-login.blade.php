@@ -86,6 +86,20 @@
                             class="img-fluid" alt="Phone image">
                     </div>
                     <div class="col-md-7 col-lg-5 col-xl-6 offset-xl-1">
+                        @if (session()->has('error'))
+                            <div class="alert mb-4 alert-success alert-dismissible fade show" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
+                        @if (session()->has('success'))
+                            <div class="alert mb-4 alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
                         <div class="shadow p-3 mb-5 bg-body rounded">
                             <form>
                                 <!-- Email input -->

@@ -6,20 +6,14 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class UserRole extends Model
 {
     use HasFactory, HasUuids;
-    protected $table = 'Kategori';
+
+    protected $table = 'userrole';
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'namaKategori',
-        'JenisKategori',
-        'image'
+        'roleName',
     ];
-
-    public function kegiatan()
-    {
-        return $this->hasMany(Kegiatan::class, 'id_kategori');
-    }
 }
