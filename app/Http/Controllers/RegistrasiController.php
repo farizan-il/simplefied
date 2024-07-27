@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserVerification;
 use Illuminate\Support\Facades\Hash;
 use App\Models\UserCredentials;
 use App\Models\UserProfile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\VerificationMail;
 use Illuminate\Support\Facades\Validator;
 
 class RegistrasiController extends Controller
@@ -61,9 +64,26 @@ class RegistrasiController extends Controller
         ]);
 
         if ($validasi) {
-            return redirect('/login')->with('success', 'Pendaftaran berhasil! silahkan login');
+            // Buat token verifikasi
+            $tokens = [];
+            for ($i = 0; $i < 6; $i++) {
+                $token = strtoupper(bin2hex(random_bytes(3)));
+                $tokens[] = $token;
+                
+                // Simpan token di database
+                UserVerification::create([
+                    'user_credentials_id' => $credentials->id,
+                    'token' => $token,
+                    'expired' => now()->addMinutes(2), // Token expired dalam 1 jam
+                ]);
+            }
+
+            // Kirim email dengan token verifikasi
+            mail::to($credentials->email)->send(new VerificationMail($tokens));
+
+            return redirect('/login')->with('success', 'Pendaftaran berhasil! Silakan cek email Anda untuk token verifikasi.');
         } else {
-            return redirect('/login')->with('error', 'Pendaftaran Gagal! silahkan login');
+            return redirect('/login')->with('error', 'Pendaftaran Gagal! Silakan coba lagi.');
         }
         
     }

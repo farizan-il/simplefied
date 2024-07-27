@@ -103,46 +103,14 @@
                             <form class="row g-3" action="/register" method="POST">
                                 @csrf
                             
-                                <div class="col-md-6">
-                                    <label for="inputEmail4" class="form-label" style="font-size: 14px">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Masukan Email Anda">
-                                </div>
-                            
-                                <div class="col-md-6">
-                                    <label for="inputUsername" class="form-label" style="font-size: 14px">Username</label>
-                                    <input type="text" class="form-control" id="inputUsername" name="username" placeholder="Masukan Username Anda">
+                                <div class="col-12">
+                                    <label for="inputVerifikasi" class="form-label" style="font-size: 14px">Masukan Token Verifikasi</label>
+                                    <input type="text" class="form-control" id="inputVerifikasi" name="verifikasi" placeholder="Masukan Token">
                                 </div>
                             
                                 <div class="col-12">
-                                    <label for="inputNama" class="form-label" style="font-size: 14px">Nama Lengkap</label>
-                                    <input type="text" class="form-control" id="inputNama" name="nama" placeholder="Masukan Nama Lengkap">
-                                </div>
-                            
-                                <div class="col-12">
-                                    <label for="inputPassword" class="form-label" style="font-size: 14px">Kata Sandi</label>
-                                    <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Masukan Kata Sandi Anda">
-                                </div>
-                            
-                                <div class="col-md-8">
-                                    <label for="inputConfirmPassword" class="form-label" style="font-size: 14px">Konfirmasi Kata Sandi</label>
-                                    <input type="password" class="form-control" id="inputConfirmPassword" name="password_confirmation">
-                                </div>
-                            
-                                <div class="col-md-4">
-                                    <label for="inputGender" class="form-label" style="font-size: 14px">Jenis Kelamin</label>
-                                    <select id="inputGender" class="form-select" name="jenisKelamin">
-                                        <option selected>-- pilih --</option>
-                                        <option value="Pria">Pria</option>
-                                        <option value="Wanita">Wanita</option>
-                                    </select>
-                                </div>
-                            
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-dark btn-md btn-block">DAFTAR</button>
-                                    <div class="divider d-flex align-items-center my-4">
-                                        <p class="text-center fw-bold mx-3 mb-0 text-muted">atau</p>
-                                    </div>
-                                    <a href="/login" class="btn btn-light border-secondary btn-md btn-block">LOGIN</a>
+                                    <button type="submit" class="btn btn-dark btn-md btn-block">Verifikasi</button>
+                                    <a class="text-dark" style="font-size: 14px">Kirim Ulang</a>
                                 </div>
                             </form>
                         </div>
@@ -150,8 +118,6 @@
                 </div>
             </div>
         </section>
-
-        
 
         <!-- jQuery -->
         <script src="{{ asset ('assets/js/jquery-2.1.0.min.js') }}"></script>

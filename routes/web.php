@@ -3,6 +3,7 @@
 use App\Http\Controllers\AutentifikasiController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\SimplefiedController;
+use App\Http\Controllers\VerifikasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,4 @@ Route::get('/payment-course', function () {
 
 Route::resource('/login', AutentifikasiController::class);
 Route::resource('/register', RegistrasiController::class);
+Route::resource('/verifikasi', VerifikasiController::class);
