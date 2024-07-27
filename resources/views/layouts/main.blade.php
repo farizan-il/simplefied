@@ -103,10 +103,10 @@
             font-size: 1.5rem;
             color: #aaa;
         }
-    </style>
-
-
-
+        /* text deskripsi */
+        .text-wrapper p {
+            color: rgb(27, 27, 27); /* Gaya untuk semua tag <p> di dalam .text-wrapper */
+        }
     </style>
 
     </head>

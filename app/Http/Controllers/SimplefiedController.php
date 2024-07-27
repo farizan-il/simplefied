@@ -53,11 +53,22 @@ class SimplefiedController extends Controller
         $kegiatan = Kegiatan::with('kategori')->find($id);
         $modul = Modul::all();
         $submodul = DetailModul::all();
+        $syarat = explode('/', $kegiatan->syarat);
+        
+        $hal = explode('/', $kegiatan->keuntungan);
+        $totalHal = count($hal);
+        $middleIndex = ceil($totalHal / 2);
+        $halKiri = array_slice($hal, 0, $middleIndex);
+        $halKanan = array_slice($hal, $middleIndex);
+
         return view('simplefied.DetailCourse', [
             'title' => 'Simplefied | Home',
             'kursus' => $kegiatan,
             'modul' => $modul,
-            'submodul' => $submodul
+            'submodul' => $submodul,
+            'syarat' => $syarat,
+            'halKiri' => $halKiri,
+            'halKanan' => $halKanan
         ]);
     }
 

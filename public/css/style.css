@@ -1,0 +1,34 @@
+.custom-text-wrapper {
+    /* Atur gaya wrapper deskripsi */
+    margin: 0;
+    padding: 1rem;
+    background-color: #f9f9f9; /* Warna latar belakang yang lembut */
+    border: 1px solid #ddd; /* Border ringan */
+    border-radius: 5px; /* Sudut border yang membulat */
+}
+
+.custom-show-more-container {
+    /* Gaya kontainer yang menampung deskripsi lebih lanjut */
+    overflow: hidden;
+}
+
+.custom-show-more-content {
+    /* Gaya konten deskripsi */
+    font-size: 16px; /* Ukuran font */
+    color: #333; /* Warna teks */
+    line-height: 1.6; /* Jarak antar baris */
+    padding: 1rem; /* Jarak dalam konten */
+}
+
+.custom-show-more-content p {
+    margin-bottom: 1rem; /* Jarak bawah paragraf */
+    font-weight: bold;
+}
+
+.custom-show-more-content ul {
+    padding-left: 1.5rem; /* Jarak kiri list */
+}
+
+.custom-show-more-content li {
+    margin-bottom: 0.5rem; /* Jarak bawah item list */
+}

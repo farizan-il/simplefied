@@ -54,12 +54,14 @@
                             <h4>Yang akan Anda Pelajari</h4>
                             <div class="d-flex mt-3">
                                 <ul class="list-unstyled">
-                                    <li class="p-1"><i class="fa fa-check-circle text-success mr-4"></i> Node Js</li>
-                                    <li class="p-1"><i class="fa fa-check-circle text-success mr-4"></i> Node Js Dasar</li>
+                                    @foreach ($halKiri as $item)
+                                        <li class="p-1"><i class="fa fa-check-circle text-success mr-4"></i> {{ trim($item) }}</li>
+                                    @endforeach
                                 </ul>
                                 <ul class="list-unstyled m-auto">
-                                    <li class="p-1"><i class="fa fa-check-circle text-success mr-4"></i> Resful API</li>
-                                    <li class="p-1"><i class="fa fa-check-circle text-success mr-4"></i> Node Js Standar Library</li>
+                                    @foreach ($halKanan as $item)
+                                        <li class="p-1"><i class="fa fa-check-circle text-success mr-4"></i> {{ trim($item) }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -69,12 +71,9 @@
                             <h5><strong>Persyaratan Sebelum Menjalani Kursus</strong></h5>
                             <div class="d-flex mt-3">
                                 <ul class="list-unstyled">
-                                    <li class="p-1"><i class="fa fa-check-circle text-secondary mr-4"></i> Menguasai Bahasa Pemrograman JavaScript</li>
-                                    <li class="p-1"><i class="fa fa-check-circle text-secondary mr-4"></i> Mengetahui Fundamental HTML dan CSS</li>
-                                </ul>
-                                <ul class="list-unstyled m-auto">
-                                    <li class="p-1"><i class="fa fa-check-circle text-secondary mr-4"></i> Bisa Menggunakan Git</li>
-                                    <li class="p-1"><i class="fa fa-check-circle text-secondary mr-4"></i> Konsisten dan Fokus</li>
+                                    @foreach ($syarat as $k)
+                                        <li class="p-1"><i class="fa fa-check-circle text-secondary mr-4"></i> {{ $k }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <hr>
@@ -116,11 +115,7 @@
                                                 </div>
                                             </div>
                                         @endif
-                                        
                                     @endforeach
-
-                                    
-                                    
                                 </div>
                             </div>
                             <div class="total">
@@ -132,17 +127,9 @@
                         <hr>
                         <h4 class="mt-4">Deskripsi Kursus</h4>
                         <div class="text-wrapper">
-                            <p class="text-content text-white p-0">
-                                <span class="text-dark fw-bold">Jadilah programmer Python dan pelajari salah satu skills dan bahasa pemrograman yang paling dicari di seluruh dunia!</span>
-                                <span class="text-dark fw-bold">#UPDATE JULI 2020: Pembahasan tentang NUMPY telah ditambahkan!</span>
-                                <span class="text-dark">
-                                    Video ini adalah online course yang <strong>paling lengkap, to-the point, dan mudah dipahami</strong> untuk <strong>bahasa pemrograman Python di Simplefied!</strong> Tidak peduli apakah Anda <strong>belum pernah mempelajari bahasa pemrograman</strong> apapun sebelumnya, atau sudah mengetahui berbagai macam sintaks dasar, atau ingin mempelajari  fitur-fitur canggih Python, video course ini dirancang tentu saja untuk Anda! Dalam kursus ini, <strong>kami akan mengajari Anda pemrograman Python secara efektif!</strong>
-                                    <br>Dilengkapi dengan berjam-jam video course, latihan coding, dan kuis, kursus komprehensif ini tidak membutuhkan pengalaman apapun! Bahkan Anda bisa mengoperasikannya menggunakan MS Windows.
-                                    <br>Video course ini akan <strong>mengajarkan Anda Python secara praktis</strong> dengan setiap bab dilengkapi screencast yang mengajarkan sintaks, fungsi, dan aturan pemrograman  lengkap dan latihan-latihan yang menarik! Tunggu apa lagi, ayo belajarlah dengan cara  yang terbaik untuk Anda!
-                                    Kami akan memulainya dengan pembahasan kode sederhana Python. Lantas, kami akan membantu Anda menginstal Python di komputer Anda.
-                                </span>
-                            </p>
+                            <div class="show-more-module--container--teP7C"><div class="show-more-module--content--Rw-xr show-more-module--with-gradient--f4HoJ" style="max-height:22.1rem;"><div tabindex="0"><div data-purpose="safely-set-inner-html:description:description"><p><strong>Selamat datang di program pelatihan data science dan machine learning dengan Python!</strong></p><p>Pelatihan ini diperuntukan untuk rekan - rekan ingin belajar data science dan machine learning dari sudut terapan dengan memanfaatkan Python.</p><p>Bagi rekan - rekan yang belum menguasai pemrograman Python, pelatihan juga memberikan konten pemrograman dasar untuk&nbsp; Python sehingga rekan - rekan dapat mengikuti pelatihan ini dengan baik. Bagi yang sudah bisa pemrograman Python, rekan - rekan dapat melanjutkan di topik berikutnya.</p><p>Seluruh konten didalam pelatihan ini dilaksanan secara step - by - step (langkah demi langkah) dan berurutan sehingga ini diharapkan semua peserta dapat dengan mudah mengikuti semua praktikum yang diberikan didalam pelatihan ini. Diharapkan semua peserta dapat mengikuti konten pelatihan ini secara berurutan ;).</p><p>Berikut ini konten yang akan diberikan pada pelatihan ini.</p><ul><li>Persiapan pelatihan</li><li>Pemrograman Python</li><li>Pengolahan dan Analisa Data - Numpy dan Pandas</li><li>Topik Khusus - Numpy dan Pandas - Database</li><li>Visualisasi Data dengan memanfaatkan library Matplotlib dan Seaborn</li><li>Topik Khusus Visualisasi Data Time Series</li><li>Dataset, Pra-Proses dan Pengurangan Dimensi Feature (Dimensionality Reduction)</li><li>Permasalahan dan Penyelesaian Kasus Linear Regression</li><li>Permasalahan dan Penyelesaian Kasus Klasifikasi (Classification)</li><li>Permasalahan dan Penyelesaian Kasus Kekelompokkan (Clustering)</li><li>Hyperparameter Tuning Untuk Model Machine Learning</li><li>Ensemble Methods</li><li>Kumpulan Studi Kasus</li></ul><p>Jika ada hal - hal yang ingin ditanyakan mengenai topik diatas, rekan - rekan dapat langsung ditulisnya di ruang diskusi pada web ini sehingga rekan-rekan lainnya dapat mengetahui dan ikut terlibat diskusinya.</p></div></div></div></div>
                         </div>
+                        
                         <button class="btn btn-desc btn-outline-light mt-2 p-0 text-primary" onclick="toggleText()" style="font-size: 13px; font-weight: bold">Tampilkan Lebih Banyak</button>
 
                         <h4 class="mt-4">Peserta juga membeli</h4>
@@ -160,8 +147,8 @@
                                         <span class="course-rating mr-3 text-dark mt-0">5.0 <i class="fa fa-star text-warning mr-1"></i></span>
                                         <span class="text-dark mt-0 mr-4"><i class="fa fa-user text-secondary"></i> 532</span>
                                         <div class="price-diskon">
-                                            <span class="course-price text-dark mt-0 p-0"><strong>Rp129.000</strong></span>
-                                            <small class="course-discounted-price">Rp449.000</small>
+                                            <span class="course-price text-dark mt-0 p-0"><strong>Rp300.000</strong></span>
+                                            <small class="course-discounted-price">Rp200.000</small>
                                         </div>
                                     </div>
                                     <div class="favorite">
@@ -228,12 +215,12 @@
                 <div class="col-lg-4 purchase-card shadow p-3 mt-0" style="max-height: 740px; position: sticky; top: 100px;">
                     <div class="left-images">
                         <div class="video-wrapper embed-responsive embed-responsive-16by9 mb-3" data-bs-toggle="modal" data-bs-target="#videoModal">
-                            <video class="embed-responsive-item" src="assets/videos/video-play.mp4" muted></video>
+                            <video class="embed-responsive-item" src="{{ asset('assets/videos/video-play.mp4') }}" muted></video>
                             <div class="play-icon">▶</div>
                         </div>
                         <div class="down-content">
-                            <span class="fw-bold d-inline" style="font-size: 26px"><sup>Rp</sup>529.000</span>
-                            <span class="text-secondary" style="text-decoration: line-through; font-size: 14px">Rp1.200.000</span>
+                            <span class="fw-bold d-inline" style="font-size: 26px"><sup>Rp</sup>{{ number_format(($kursus->harga)-($kursus->harga*0.2), 0, ',', '.') }}</span>
+                            <span class="text-secondary" style="text-decoration: line-through; font-size: 14px">Rp{{ number_format($kursus->harga, 0, ',', '.') }}</span>
                             <div class="total mt-3">
                                 <div class="main-border-button bg-dark"><a href="#" style="font-size: 15px"><strong class="text-white">Tambahkan ke keranjang</strong></a></div>
                                 <div class="main-border-button mt-2 button-hover"><a href="/payment-course" style="font-size: 15px"><strong>Beli sekarang</strong></a></div>
