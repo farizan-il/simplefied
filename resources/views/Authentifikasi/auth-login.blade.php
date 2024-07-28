@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-md-7 col-lg-5 col-xl-6 offset-xl-1">
                         @if (session()->has('error'))
-                            <div class="alert mb-4 alert-success alert-dismissible fade show" role="alert">
+                            <div class="alert mb-4 alert-warning alert-dismissible fade show" role="alert">
                                 {{ session('error') }}
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
@@ -101,19 +101,20 @@
                             </div>
                         @endif
                         <div class="shadow p-3 mb-5 bg-body rounded">
-                            <form>
+                            <form action="{{ url('/login') }}" method="POST">
+                                @csrf
                                 <!-- Email input -->
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <input type="text" class="form-control" id="floatingInput" name="email_username" placeholder="Masukan Email atau Username">
+                                    <label for="floatingInput">Email atau Username</label>
                                 </div>
-    
+
                                 <!-- Password input -->
                                 <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
+                                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Masukan Kata Sandi">
+                                    <label for="floatingPassword">Kata Sandi</label>
                                 </div>
-    
+
                                 <div class="d-flex justify-content-between mb-4">
                                     <!-- Checkbox -->
                                     <div class="form-check">
@@ -122,23 +123,23 @@
                                     </div>
                                     <a href="#!" class="text-primary">Lupa Password?</a>
                                 </div>
-    
+
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-dark btn-md btn-block">LOGIN</button>
                                 <a href="/register" class="btn btn-light border-secondary btn-md btn-block">DAFTAR</a>
-    
+
                                 <div class="divider d-flex align-items-center my-4">
                                     <p class="text-center fw-bold mx-3 mb-0 text-muted">atau</p>
                                 </div>
-    
+
                                 <a data-mdb-ripple-init class="btn btn-primary btn-md  btn-block" style="background-color: #3b5998" href="#!" role="button">
                                     <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
                                 </a>
                                 <a data-mdb-ripple-init class="btn btn-primary btn-md  btn-block" style="background-color: #4285F4" href="#!" role="button">
                                     <i class="fab fa-google me-2"></i> Continue with Google
                                 </a>
-    
                             </form>
+
                         </div>
                     </div>
                 </div>

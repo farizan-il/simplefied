@@ -21,8 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/', SimplefiedController::class);
 Route::resource('/simplefied', SimplefiedController::class);
 
-Route::resource('/payment-course', PaymentController::class);
-
-Route::resource('/login', AutentifikasiController::class);
+Route::get('/login', [AutentifikasiController::class, 'index'])->name('login');
+Route::post('/login', [AutentifikasiController::class, 'login']);
 Route::resource('/register', RegistrasiController::class);
 Route::resource('/verifikasi', VerifikasiController::class);
+
+Route::middleware(['authAcess'])->group(function () {
+    Route::resource('/payment-course', PaymentController::class);
+});
