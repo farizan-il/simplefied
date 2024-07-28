@@ -4,6 +4,7 @@ use App\Http\Controllers\AutentifikasiController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\SimplefiedController;
 use App\Http\Controllers\VerifikasiController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,12 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/', SimplefiedController::class);
 Route::resource('/simplefied', SimplefiedController::class);
 
-
-
-Route::get('/payment-course', function () {
-    return view('simplefied.PaymentCourse');
-});
-
+Route::resource('/payment-course', PaymentController::class);
 
 Route::resource('/login', AutentifikasiController::class);
 Route::resource('/register', RegistrasiController::class);

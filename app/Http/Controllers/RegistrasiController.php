@@ -66,7 +66,7 @@ class RegistrasiController extends Controller
         if ($validasi) {
             // Buat token verifikasi
             $tokens = [];
-            for ($i = 0; $i < 6; $i++) {
+            for ($i = 0; $i < 1; $i++) {
                 $token = strtoupper(bin2hex(random_bytes(3)));
                 $tokens[] = $token;
                 
