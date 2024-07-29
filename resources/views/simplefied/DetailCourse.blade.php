@@ -219,14 +219,14 @@
                             <div class="play-icon">▶</div>
                         </div>
                         <div class="down-content">
-                            <span class="fw-bold d-inline" style="font-size: 26px"><sup>Rp</sup>{{ number_format(($kursus->harga)-($kursus->harga*0.2), 0, ',', '.') }}</span>
+                            <span class="fw-bold d-inline" style="font-size: 26px"><sup>Rp</sup>{{ number_format(($kursus->harga)-($kursus->harga*50/100), 0, ',', '.') }}</span>
                             <span class="text-secondary" style="text-decoration: line-through; font-size: 14px">Rp{{ number_format($kursus->harga, 0, ',', '.') }}</span>
                             <div class="total mt-3">
                                 <div class="main-border-button bg-dark"><a href="#" style="font-size: 15px"><strong class="text-white">Tambahkan ke keranjang</strong></a></div>
-                                <div class="main-border-button mt-2 button-hover"><a href="/payment-course" style="font-size: 15px"><strong>Beli sekarang</strong></a></div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <span class="text-dark">Garansi Uang Kembali</span>
-                                    <span class="text-dark"><strong>30 hari</strong></span>
+                                <div class="main-border-button mt-2 button-hover">
+                                    <a href="{{ route('simplefied.show', $kursus->id) }}" style="font-size: 15px"><strong>Beli sekarang</strong></a>
+                                </div>
+                                    <span class="text-dark"><strong>Garansi 30 hari</strong></span>
                                 </div>
                             </div>
                             <div class="mt-4">

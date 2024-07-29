@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kegiatan;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -11,9 +12,7 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        return view('simplefied.PaymentCourse',[
-            'title' => 'Payment Kursus'
-        ]);
+        
     }
 
     /**

@@ -27,7 +27,7 @@
                                 <tr>
                                     @foreach($tokens as $token)
                                     <td style="padding: 20px 0 30px 0;" align="center">
-                                        <a href="LINK_VERIFIKASI" style="background-color: #4c77af; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px;"><strong>{{ $token }}</strong></a>
+                                        <a  style="background-color: #4c77af; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px;"><strong>{{ $token }}</strong></a>
                                     </td>
                                     @endforeach
                                 </tr>

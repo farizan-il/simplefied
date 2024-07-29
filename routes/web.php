@@ -18,14 +18,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// akses tanpa login terlebih dahulu
 Route::resource('/', SimplefiedController::class);
 Route::resource('/simplefied', SimplefiedController::class);
 
-Route::get('/login', [AutentifikasiController::class, 'index'])->name('login');
-Route::post('/login', [AutentifikasiController::class, 'login']);
-Route::resource('/register', RegistrasiController::class);
-Route::resource('/verifikasi', VerifikasiController::class);
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AutentifikasiController::class, 'index'])->name('login');
+    Route::post('/login', [AutentifikasiController::class, 'login']);
+    Route::resource('/register', RegistrasiController::class);
+    Route::resource('/verifikasi', VerifikasiController::class);
+});
 
+// harus login dulu
 Route::middleware(['authAcess'])->group(function () {
-    Route::resource('/payment-course', PaymentController::class);
+    Route::resource('/payment-course', PaymentController::class)->only(['show']);
 });

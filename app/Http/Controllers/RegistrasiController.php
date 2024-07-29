@@ -81,11 +81,10 @@ class RegistrasiController extends Controller
             // Kirim email dengan token verifikasi
             mail::to($credentials->email)->send(new VerificationMail($tokens));
 
-            return redirect('/login')->with('success', 'Pendaftaran berhasil! Silakan cek email Anda untuk token verifikasi.');
+            return redirect('/verifikasi')->with('success', 'Pendaftaran berhasil! Silakan cek email Anda untuk token verifikasi.');
         } else {
             return redirect('/login')->with('error', 'Pendaftaran Gagal! Silakan coba lagi.');
         }
-        
     }
 
     /**

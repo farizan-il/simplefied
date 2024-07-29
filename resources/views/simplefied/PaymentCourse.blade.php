@@ -144,18 +144,27 @@
                         </div>
                     </div>
 
-                    <h4 class="fs-4 mt-5"><strong>Detail Pesanan</strong></h4>
+                    <h4 class="fs-4 mt-5 mb-4"><strong>Detail Pesanan</strong></h4>
                     <div class="course-container row align-items-center mt-2">
                         <div class="row  justify-content-between">
-                            <div class="col-8 d-flex">
-                                <img src="assets/images/course4.png" alt="Course Image" class="course-image mr-2 rounded" width="40px">
-                                <div class="desc-course">
-                                    <h6 class="mb-1">Pelatihan Data Science dan Machine Learning Dengan Python</h6>
+                            @foreach($item as $k)
+                                @if($k->id_kegiatan == $kegiatan->id)
+                                <div class="col-1">
+                                    <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $kegiatan->foto }}"  class="course-image mr-2 rounded" width="40px">
                                 </div>
-                            </div>
-                            <div class="col-2">
-                                <span class="course-price text-dark mt-0 p-0"><strong>Rp129.000</strong></span>
-                            </div>
+                                <div class="col-9 d-flex">
+                                    <div class="desc-course">
+                                        <h6 class="mb-1"><strong>{{ $kegiatan->title }}</strong></h6>
+                                        <h6 class="mb-1 text-secondary" style="font-size: 14px;">{{ \Illuminate\Support\Str::limit($kegiatan->subtitle, 60, '...') }}</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <span class="course-price text-dark mt-0 p-0"><strong>Rp{{ number_format(($kegiatan->harga)-($kegiatan->harga*50/100), 0, ',', '.') }}</strong></span>
+                                </div>
+                                @break
+                                @endif
+                                
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -168,15 +177,15 @@
                             <div class="total mt-3">
                                 <div class="d-flex justify-content-between mt-2">
                                     <span class="text-dark">Harga Asli:</span>
-                                    <span class="text-dark"><strong>Rp1.239.000</strong></span>
+                                    <span class="text-dark"><strong>Rp{{ number_format(($kegiatan->harga), 0, ',', '.') }}</strong></span>
                                 </div>
                                 <div class="d-flex justify-content-between mt-2">
                                     <span class="text-dark">Diskon:</span>
-                                    <span class="text-dark"><strong>-Rp450.000</strong></span>
+                                    <span class="text-dark"><strong>Rp{{ number_format(($kegiatan->harga*50/100), 0, ',', '.') }}</strong></span>
                                 </div>
                                 <div class="d-flex justify-content-between border-top mt-4 border-secondary">
                                     <span class="text-dark"><strong>Total:</strong></span>
-                                    <span class="text-dark"><strong>Rp789.000</strong></span>
+                                    <span class="text-dark"><strong>Rp{{ number_format(($kegiatan->harga)-($kegiatan->harga*50/100), 0, ',', '.') }}</strong></span>
                                 </div>
                             </div>
                             <div class="payment mt-5 mb-3">

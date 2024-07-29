@@ -80,7 +80,7 @@
 
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li class="scroll-to-section"><a href="">Batal</a></li>
+                                <li class="scroll-to-section"><a href="javascript:history.back()">Batal</a></li>
                             </ul>        
                             <a class='menu-trigger'>
                                 <span>Menu</span>

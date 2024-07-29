@@ -42,7 +42,14 @@ class SimplefiedController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $kegiatan = Kegiatan::find($id);
+        $modul = Modul::where('id_kegiatan', $id)->get();
+
+        return view('simplefied.PaymentCourse', [
+            'title' => 'Payment Kursus',
+            'item' => $modul,
+            'kegiatan' => $kegiatan
+        ]);
     }
 
     /**

@@ -100,7 +100,7 @@
                             </div>
                         @endif
                         <div class="shadow p-3 mb-5 bg-body rounded">
-                            <form class="row g-3" action="/register" method="POST">
+                            <form class="row g-3" action="/verifikasi" method="POST">
                                 @csrf
                             
                                 <div class="col-12">
@@ -110,7 +110,10 @@
                             
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-dark btn-md btn-block">Verifikasi</button>
-                                    <a class="text-dark" style="font-size: 14px">Kirim Ulang</a>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="text-dark mt-3" style="font-size: 14px">Kirim Ulang</a>
                                 </div>
                             </form>
                         </div>

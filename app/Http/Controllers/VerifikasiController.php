@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserCredentials;
+use App\Models\UserVerification;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class VerifikasiController extends Controller
@@ -29,7 +32,24 @@ class VerifikasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'verifikasi' => 'required|string'
+        ]);
+
+        $token = $validated['verifikasi'];
+        $verification = UserVerification::where('token', $token)->first();
+
+        if ($verification && $verification->expired >= Carbon::now()) {
+            // Token valid dan tidak kedaluwarsa
+            $credentials = UserCredentials::find($verification->user_credentials_id);
+            $credentials->isLocked = 1;
+            $credentials->save();
+
+            return redirect('/login')->with('success', 'Verifikasi berhasil! Silakan login.');
+        } else {
+            // Token tidak valid atau kedaluwarsa
+            return redirect('/verifikasi')->with('error', 'Token verifikasi tidak valid atau telah kedaluwarsa.');
+        }
     }
 
     /**

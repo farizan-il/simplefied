@@ -125,7 +125,7 @@
             
             <!-- ***** Header Area Start ***** -->
             <header class="header-area header-sticky">
-                <div class="container-xxl">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
                             <nav class="main-nav">
@@ -152,8 +152,24 @@
                                         </ul>
                                     </li>
                                     
-                                    <li class="scroll-to-section"><a href="#explore" class="btn border py-0 text-dark">Masuk</a></li>
-                                    <li class="scroll-to-section"><a href="#ex" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
+                                    @if (Auth::check())
+                                        <li>
+                                            <a href="/cart" class="" style="text-decoration: none; color: inherit;">
+                                                <i class="fa fa-shopping-cart" style="font-size: 20px;"></i>
+                                            </a>
+                                        </li>
+                                        <li class="submenu scroll-to-section">
+                                            <a href="javascript:;" class="btn border py-0 text-dark">{{ \Illuminate\Support\Str::limit(Auth::user()->username, 15, '...') }}</a>
+                                            <ul>
+                                                <li><a href="about.html">Profile</a></li>
+                                                <li><a href="single-product.html">Favorit Saya</a></li>
+                                                <li><a href="contact.html">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li class="scroll-to-section"><a href="#login" class="btn border py-0 text-dark">Masuk</a></li>
+                                        <li class="scroll-to-section"><a href="#register" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
+                                    @endif
                                 </ul>        
                                 <a class='menu-trigger'>
                                     <span>Menu</span>

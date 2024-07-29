@@ -36,15 +36,22 @@ class AutentifikasiController extends Controller
             ->orWhere('username', $emailUsername)
             ->first();
 
-        if ($user && Hash::check($password, $user->password)) {
-            Auth::login($user);
-            if ($user->isLocked == 1) {
-                return redirect('/')->with('success', 'Login berhasil!');
+        // Jika pengguna ditemukan
+        if ($user) {
+            // Cek apakah kata sandi benar
+            if (Hash::check($password, $user->password)) {
+                // Cek apakah akun sudah diaktifasi
+                if ($user->isLocked == 1) {
+                    Auth::login($user);
+                    return redirect('/')->with('success', 'Login berhasil!');
+                } else {
+                    return redirect('/login')->with('error', 'Akun Anda belum diaktivasi!');
+                }
             } else {
-                return redirect('/login')->with('error', 'Akun anda belum di aktivasi!');
+                return redirect('/login')->with('error', 'Kata sandi yang Anda masukkan salah!');
             }
         } else {
-            return redirect('/login')->with('error', 'Pengguna yang anda masukan tidak terdaftarc !');
+            return redirect('/login')->with('error', 'Pengguna yang Anda masukkan tidak terdaftar!');
         }
     }
 
