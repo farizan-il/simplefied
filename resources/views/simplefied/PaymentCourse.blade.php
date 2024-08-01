@@ -28,7 +28,8 @@
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
+                                        {{-- isi form terlebih dahulu --}}
+                                        {{-- <div class="accordion-body">
                                             <div class="form-floating  mb-3">
                                                 <input type="Nama" class="form-control" id="floatingNama" placeholder="Nama">
                                                 <label for="floatingNama">Nama Lengkap</label>
@@ -36,6 +37,37 @@
                                             <div class="form-floating">
                                                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                                 <label for="floatingInput">Alamat Email</label>
+                                            </div>
+                                        </div> --}}
+
+                                        {{-- informasi pembayaran --}}
+                                        <div class="accordion-body">
+                                            <p class="text-dark"><strong class="text-danger">Catatan: </strong>Jika anda telah selesai membayar, <strong>upload bukti pembayaran</strong> di form yang sudah tersedia. Selesaikan pembayaran Anda dalam waktu 48 jam. Setelah pembayaran disetujui, butuh waktu hingga 30 menit untuk mengirimkan kursus ke akun Simplefied Anda.</p>
+                                            <!-- File Upload Section -->
+                                            <div class="mt-4">
+                                                <h6>Upload Bukti Pembayaran</h6>
+                                                <form action="/upload_payment_proof" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
+                                                    <div class="flex-grow-1">
+                                                        <input class="form-control me-2" type="file" id="formFile" name="paymentProof">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-secondary">Kirim</button>
+                                                </form>
+                                            </div>
+                                            <div class="card border-primary mt-4">
+                                                <div class="card-body">
+                                                    <p class="card-title text-dark mt-0">Terima kasih atas pembelian Anda. Silakan gunakan informasi berikut untuk menyelesaikan pembayaran.</p>
+                                                    <p class="card-text text-primary fs-6"><strong>Rp 225.000,00</strong></p>
+                                                    <div class="mb-2 mt-3">
+                                                        <strong class="text-dark">Referensi Pembayaran:</strong>
+                                                        <div class="input-group input-group-lg">
+                                                            <input type="text" class="form-control bg-light fw-bold" value="1236227400635225" readonly>
+                                                            <button class="btn btn-outline-secondary" type="button" onclick="copyText('1236227400635225')">Salin</button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-dark  ">Tanggal Kedaluwarsa: <strong> 03/08/2024</strong></p>
+                                                    <p class="text-dark  mt-0">Nama Pembeli: <strong>  zan zan </strong></p>
+                                                    <p class="text-dark  mt-0">Merchant: <strong>  Simplefied </strong></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -212,4 +244,17 @@
             </div>
         </div>
     </div>
+@endsection
+
+
+@section('script')
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Referensi Pembayaran disalin ke clipboard');
+            }, function(err) {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        }
+    </script>
 @endsection

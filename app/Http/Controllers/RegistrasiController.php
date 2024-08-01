@@ -74,7 +74,7 @@ class RegistrasiController extends Controller
                 UserVerification::create([
                     'user_credentials_id' => $credentials->id,
                     'token' => $token,
-                    'expired' => now()->addMinutes(2), // Token expired dalam 1 jam
+                    'expired' => now()->addMinutes(5), // Token expired dalam 5 menit
                 ]);
             }
 

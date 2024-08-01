@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kegiatan;
 use App\Models\DetailModul;
 use App\Models\Modul;
+use App\Models\UserCredentials;
 use Illuminate\Http\Request;
 
 class SimplefiedController extends Controller
@@ -44,11 +45,13 @@ class SimplefiedController extends Controller
     {
         $kegiatan = Kegiatan::find($id);
         $modul = Modul::where('id_kegiatan', $id)->get();
+        $user = UserCredentials::find($id);
 
         return view('simplefied.PaymentCourse', [
             'title' => 'Payment Kursus',
             'item' => $modul,
-            'kegiatan' => $kegiatan
+            'kegiatan' => $kegiatan,
+            'user' => $user
         ]);
     }
 

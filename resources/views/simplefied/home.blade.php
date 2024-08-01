@@ -136,9 +136,9 @@
                                         <div class="thumb">
                                             <div class="hover-content">
                                                 <ul>
-                                                    <li><a href="detail-course"><i class="fa fa-eye"></i></a></li>
                                                     <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href="{{ route('simplefied.edit', $item->id) }}"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="{{ route('simplefied.edit', $item->id) }}"><i class="fa fa-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                             <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $item->foto }}" alt="">
@@ -146,7 +146,7 @@
                                         <div class="down-content">
                                             <h5><strong>{{ $item->title }}</strong></h5>
                                             <p class="fs-6 text-secondary">{{ $item->kategori->namaKategori }}</p>
-                                            <ul class="stars-list d-flex gap-3" style="list-style: none">
+                                            <ul class="stars-list d-flex gap-2 mb-3" style="list-style: none">
                                                 <li><p class="fs-6 fw-semibold mr-1">4,3</p></li>
                                                 <li><i class="fa fa-star text-warning mr-1"></i></li>
                                                 <li><i class="fa fa-star text-warning mr-1"></i></li>

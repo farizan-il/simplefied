@@ -74,7 +74,7 @@
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
                             <a href="index.html" class="logo">
-                                <img src="assets/images/white-logo-nav.png" alt="">
+                                <img src="{{ asset('assets/images/white-logo-nav.png') }}" alt="Logo">
                             </a>
                             <!-- ***** Logo End ***** -->
 
@@ -121,5 +121,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+        @yield('script')
     </body>
 </html>

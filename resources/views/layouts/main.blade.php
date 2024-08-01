@@ -163,7 +163,13 @@
                                             <ul>
                                                 <li><a href="about.html">Profile</a></li>
                                                 <li><a href="single-product.html">Favorit Saya</a></li>
-                                                <li><a href="contact.html">Logout</a></li>
+                                                <li>
+                                                    <form action="{{ route('logout') }}" method="POST">
+                                                        <button type="submit">
+                                                            <a href="">Logout</a>
+                                                        </button>    
+                                                    </form>
+                                                </li>
                                             </ul>
                                         </li>
                                     @else
