@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kegiatan;
 use App\Models\DetailModul;
 use App\Models\Modul;
+use App\Models\Transaksi;
 use App\Models\UserCredentials;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,7 @@ class SimplefiedController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

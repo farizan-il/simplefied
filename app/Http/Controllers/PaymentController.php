@@ -6,6 +6,7 @@ use App\Models\Kategori;
 use App\Models\Kegiatan;
 use App\Models\Modul;
 use App\Models\Payment;
+use App\Models\Transaksi;
 use App\Models\UserCredentials;
 use Illuminate\Http\Request;
 
@@ -16,11 +17,6 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        $kegiatan = Kegiatan::with('kategori')->get();
-        return view('simplefied.paymentcourse', [
-            'title' => 'Simplefied | Payment Course',
-            'kursus' => $kegiatan
-        ]);
     }
 
     /**
@@ -36,7 +32,53 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ValidatedData = $request->validate([
+            'id_credentials' => 'required|max:255',
+            'payment' => 'required|max:255',
+            'kegiatan' => 'required',
+            'title' => 'required',
+            'kategori' => 'required',
+            // 'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'harga' => 'required',
+            'nama' => 'required|max:255',
+            'email' => 'required|max:255'
+        ]);
+
+        $addTransaksi = Transaksi::create([
+            'user_credentials_id' =>$ValidatedData['id_credentials'],
+            'payment_id' =>$ValidatedData['payment'],
+            'namaPelanggan' => $ValidatedData['nama'],
+            'emailPelanggan' => $ValidatedData['email'],
+            'kegiatan_id' => $ValidatedData['kegiatan'],
+            // 'foto' => $validatedData['gambar'],
+            'namaKursus' => $ValidatedData['title'],
+            'kategoriKursus' => $ValidatedData['kategori'],
+            'harga' => $ValidatedData['harga'],
+        ]);
+
+        if ($addTransaksi) {
+            return redirect()->route('payment.paymentproof', $addTransaksi->id)->with('success', 'Kegiatan berhasil ditambahkan!');
+        }else{
+            return redirect('/payment')->with('error', 'Kegiatan gagal ditambahkan!');
+        }
+    }
+
+    public function paymentproof(string $id)
+    {
+        $transaksi = Transaksi::with('Payment')->find($id);
+        $kegiatan = Transaksi::with('Kegiatan')->find($id);
+
+        $namaPayment = null;
+        if ($transaksi && $transaksi->payment) {
+            $namaPayment = $transaksi->payment->namaPayment;
+        }
+        
+        return view('simplefied.payment.paymentproof', [
+            'title' => 'Payment Kursus',
+            'namaPayment' => $namaPayment,
+            'transaksi' => $transaksi,
+            'kegiatan' => $kegiatan
+        ]);
     }
 
     /**
@@ -45,15 +87,14 @@ class PaymentController extends Controller
     public function show(string $id)
     {
         $payment = Payment::all();
-        $kegiatan = Kegiatan::find($id);
-        $kategori = Kategori::all();
+        $kegiatan = Kegiatan::with('kategori')->find($id);
+
         $modul = Modul::where('id_kegiatan', $id)->get();
         $user = UserCredentials::find($id);
 
-        if ($kegiatan->id_kategori == $Kategori->) {
-            # code...
-        } else {
-            # code...
+        $namaKategori = null;
+        if ($kegiatan && $kegiatan->kategori) {
+            $namaKategori = $kegiatan->kategori->namaKategori;
         }
         
 
@@ -62,7 +103,8 @@ class PaymentController extends Controller
             'item' => $modul,
             'kegiatan' => $kegiatan,
             'user' => $user,
-            'payment' => $payment
+            'payment' => $payment,
+            'kategori' => $namaKategori
         ]);
     }
 

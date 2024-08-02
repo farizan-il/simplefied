@@ -30,23 +30,22 @@
                                         <div id="collapseOne{{ $pay->id }}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             {{-- isi form terlebih dahulu --}}
                                             <div class="accordion-body" id="formSection">
-                                                <form id="paymentForm">
+                                                <form id="paymentForm" action="/payment" method="POST">
+                                                    @csrf
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ Auth::user()->id }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $pay->id }} - payment id" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->id }} - kegiatan id" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->title }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->namaKategori }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->harga }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="pending" required>
-                                                        <label for="floatingNama">Nama</label>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="id_credentials" value="{{ Auth::user()->id }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="payment" value="{{ $pay->id }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="kegiatan" value="{{ $kegiatan->id }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="title" value="{{ $kegiatan->title }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="kategori" value="{{ $kategori }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="harga" value="{{ $kegiatan->harga }}" required>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="nama" required>
                                                         <label for="floatingNama">Nama Lengkap</label>
                                                     </div>
                                                     <div class="form-floating">
-                                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                                        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
                                                         <label for="floatingInput">Alamat Email</label>
                                                         <div id="emailHelp" class="form-text">Modul kursus akan dikirim ke alamat email tersebut</div>
                                                     </div>
@@ -57,7 +56,6 @@
                                             {{-- informasi pembayaran --}}
                                             <div class="accordion-body" id="paymentInfo" style="display: none;">
                                                 <p class="text-dark"><strong class="text-danger">Catatan: </strong>Jika anda telah selesai membayar, <strong>upload bukti pembayaran</strong> di form yang sudah tersedia. Selesaikan pembayaran Anda dalam waktu 48 jam. Setelah pembayaran disetujui, butuh waktu hingga 30 menit untuk mengirimkan kursus ke akun Simplefied Anda.</p>
-                                                <!-- File Upload Section -->
                                                 <div class="mt-5">
                                                     <h6 class="fw-bold">Upload Bukti Pembayaran</h6>
                                                     <form action="/upload_payment_proof" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
@@ -176,21 +174,21 @@
 
     {{-- script untuk payment informasi agar terlihat setelah mengisi form --}}
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('paymentForm');
-            const formSection = document.getElementById('formSection');
-            const paymentInfo = document.getElementById('paymentInfo');
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const form = document.getElementById('paymentForm');
+        //     const formSection = document.getElementById('formSection');
+        //     const paymentInfo = document.getElementById('paymentInfo');
 
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission
+        //     form.addEventListener('submit', function(event) {
+        //         event.preventDefault(); // Prevent default form submission
 
-                // Hide the form section
-                formSection.style.display = 'none';
+        //         // Hide the form section
+        //         formSection.style.display = 'none';
 
-                // Show the payment information section
-                paymentInfo.style.display = 'block';
-            });
-        });
+        //         // Show the payment information section
+        //         paymentInfo.style.display = 'block';
+        //     });
+        // });
     
         function copyText(text) {
             navigator.clipboard.writeText(text).then(function() {

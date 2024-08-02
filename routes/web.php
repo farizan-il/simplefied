@@ -31,6 +31,7 @@ Route::middleware('guest')->group(function () {
 
 // harus login dulu
 Route::middleware(['authAcess'])->group(function () {
-    Route::resource('/payment', PaymentController::class)->only(['show']);
+    Route::resource('/payment', PaymentController::class);
+    Route::get('/payment-proof/{id}', [PaymentController::class, 'paymentproof'])->name('payment.paymentproof');
     Route::post('/logout', [AutentifikasiController::class, 'logout'])->name('logout');
 });
