@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kegiatan;
 use App\Models\Modul;
+use App\Models\Payment;
 use App\Models\UserCredentials;
 use Illuminate\Http\Request;
 
@@ -42,6 +43,7 @@ class PaymentController extends Controller
      */
     public function show(string $id)
     {
+        $payment = Payment::all();
         $kegiatan = Kegiatan::find($id);
         $modul = Modul::where('id_kegiatan', $id)->get();
         $user = UserCredentials::find($id);
@@ -50,7 +52,8 @@ class PaymentController extends Controller
             'title' => 'Payment Kursus',
             'item' => $modul,
             'kegiatan' => $kegiatan,
-            'user' => $user
+            'user' => $user,
+            'payment' => $payment
         ]);
     }
 

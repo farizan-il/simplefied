@@ -16,166 +16,68 @@
                         {{-- payment kursus --}}
                         <div class="mt-3">
                             <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
-                                            <span class="text-dark fs-6 mr-4 mt-0">
-                                                <img src="https://www.udemy.com/staticx/udemy/images/v9/hpp-doku-bri-va.svg" alt="" width="40px" class="mr-3 border border-secondary rounded">
-                                                <strong>Transfer Bank BRI</strong>
-                                            </span>
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        {{-- isi form terlebih dahulu --}}
-                                        <div class="accordion-body" id="formSection">
-                                            <form id="paymentForm">
-                                                <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingNama" placeholder="Nama" required>
-                                                    <label for="floatingNama">Nama Lengkap</label>
-                                                </div>
-                                                <div class="form-floating">
-                                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                                                    <label for="floatingInput">Alamat Email</label>
-                                                    <div id="emailHelp" class="form-text">Modul kursus akan dikirim ke alamat email tersebut</div>
-                                                </div>
-                                                <button class="btn bg-dark mt-2 col-3 text-white mt-4" type="submit">Submit</button>
-                                            </form>
-                                        </div>
-                                    
-                                        {{-- informasi pembayaran --}}
-                                        <div class="accordion-body" id="paymentInfo" style="display: none;">
-                                            <p class="text-dark"><strong class="text-danger">Catatan: </strong>Jika anda telah selesai membayar, <strong>upload bukti pembayaran</strong> di form yang sudah tersedia. Selesaikan pembayaran Anda dalam waktu 48 jam. Setelah pembayaran disetujui, butuh waktu hingga 30 menit untuk mengirimkan kursus ke akun Simplefied Anda.</p>
-                                            <!-- File Upload Section -->
-                                            <div class="mt-5">
-                                                <h6 class="fw-bold">Upload Bukti Pembayaran</h6>
-                                                <form action="/upload_payment_proof" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
-                                                    <div class="flex-grow-1">
-                                                        <input class="form-control me-2" type="file" id="formFile" name="paymentProof">
+                                @foreach ($payment as $pay)    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $pay->id }}"
+                                                aria-expanded="true" aria-controls="collapseTwo">
+                                                <span class="text-dark fs-6 mr-4 mt-0">
+                                                    <img src="{{ $pay->icon }}" alt="" width="40px" class="mr-3 border border-secondary rounded">
+                                                    <strong>Transfer {{ $pay->namaPayment }}</strong>
+                                                </span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne{{ $pay->id }}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            {{-- isi form terlebih dahulu --}}
+                                            <div class="accordion-body" id="formSection">
+                                                <form id="paymentForm">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" required>
+                                                        <label for="floatingNama">Nama Lengkap</label>
                                                     </div>
-                                                    <button type="submit" class="btn btn-secondary">Kirim</button>
+                                                    <div class="form-floating">
+                                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                                        <label for="floatingInput">Alamat Email</label>
+                                                        <div id="emailHelp" class="form-text">Modul kursus akan dikirim ke alamat email tersebut</div>
+                                                    </div>
+                                                    <button class="btn bg-dark mt-2 col-3 text-white mt-4" type="submit">Submit</button>
                                                 </form>
                                             </div>
-                                            <div class="card border-primary mt-4">
-                                                <div class="card-body">
-                                                    <p class="card-title text-dark mt-0">Terima kasih atas pembelian Anda. Silakan gunakan informasi berikut untuk menyelesaikan pembayaran.</p>
-                                                    <p class="card-text text-primary fs-6"><strong>Rp 225.000,00</strong></p>
-                                                    <div class="mb-2 mt-3">
-                                                        <strong class="text-dark">Referensi Pembayaran:</strong>
-                                                        <div class="input-group input-group-lg">
-                                                            <input type="text" class="form-control bg-light fw-bold" value="1236227400635225" readonly>
-                                                            <button class="btn btn-outline-secondary" type="button" onclick="copyText('1236227400635225')">Salin</button>
+                                        
+                                            {{-- informasi pembayaran --}}
+                                            <div class="accordion-body" id="paymentInfo" style="display: none;">
+                                                <p class="text-dark"><strong class="text-danger">Catatan: </strong>Jika anda telah selesai membayar, <strong>upload bukti pembayaran</strong> di form yang sudah tersedia. Selesaikan pembayaran Anda dalam waktu 48 jam. Setelah pembayaran disetujui, butuh waktu hingga 30 menit untuk mengirimkan kursus ke akun Simplefied Anda.</p>
+                                                <!-- File Upload Section -->
+                                                <div class="mt-5">
+                                                    <h6 class="fw-bold">Upload Bukti Pembayaran</h6>
+                                                    <form action="/upload_payment_proof" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
+                                                        <div class="flex-grow-1">
+                                                            <input class="form-control me-2" type="file" id="formFile" name="paymentProof">
                                                         </div>
+                                                        <button type="submit" class="btn btn-secondary">Kirim</button>
+                                                    </form>
+                                                </div>
+                                                <div class="card border-primary mt-4">
+                                                    <div class="card-body">
+                                                        <p class="card-title text-dark mt-0">Terima kasih atas pembelian Anda. Silakan gunakan informasi berikut untuk menyelesaikan pembayaran.</p>
+                                                        <p class="card-text text-primary fs-6"><strong>Rp 225.000,00</strong></p>
+                                                        <div class="mb-2 mt-3">
+                                                            <strong class="text-dark">Referensi Pembayaran:</strong>
+                                                            <div class="input-group input-group-lg">
+                                                                <input type="text" class="form-control bg-light fw-bold" value="{{ $pay->noRef}}" readonly>
+                                                                <button class="btn btn-outline-secondary" type="button" onclick="copyText('1236227400635225')">Salin</button>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-dark">Tanggal Kedaluwarsa: <strong> 03/08/2024</strong></p>
+                                                        <p class="text-dark mt-0">Nama Pembeli: <strong> {{ Auth::user()->username }} </strong></p>
+                                                        <p class="text-dark mt-0">Merchant: <strong> Simplefied </strong></p>
                                                     </div>
-                                                    <p class="text-dark">Tanggal Kedaluwarsa: <strong> 03/08/2024</strong></p>
-                                                    <p class="text-dark mt-0">Nama Pembeli: <strong> zan zan </strong></p>
-                                                    <p class="text-dark mt-0">Merchant: <strong> Simplefied </strong></p>
                                                 </div>
                                             </div>
                                         </div>
+                                                                        
                                     </div>
-                                                                       
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            <span class="text-dark fs-6 mr-4 mt-0">
-                                                <img src="https://www.udemy.com/staticx/udemy/images/v9/hpp-doku-mandiri-va.svg" alt="" width="40px" class="mr-3 border border-secondary rounded">
-                                                <strong>Transfer Bank Mandiri</strong>
-                                            </span>
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="form-floating  mb-3">
-                                                <input type="Nama" class="form-control" id="floatingNama" placeholder="Nama">
-                                                <label for="floatingNama">Nama Lengkap</label>
-                                            </div>
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                                <label for="floatingInput">Alamat Email</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <span class="text-dark fs-6 mr-4 mt-0">
-                                                <img src="https://www.udemy.com/staticx/udemy/images/v9/hpp-doku-bni-va.svg" alt="" width="40px" class="mr-3 border border-secondary rounded">
-                                                <strong>Transfer Bank BNI</strong>
-                                            </span>
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="form-floating  mb-3">
-                                                <input type="Nama" class="form-control" id="floatingNama" placeholder="Nama">
-                                                <label for="floatingNama">Nama Lengkap</label>
-                                            </div>
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                                <label for="floatingInput">Alamat Email</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                            <span class="text-dark fs-6 mr-4 mt-0">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/8/86/20210529064535%21Gopay_logo.svg/120px-Gopay_logo.svg.png" alt="" width="40px" height="25px" class="mr-3 border border-secondary rounded">
-                                                <strong>Gopay</strong>
-                                            </span>
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="form-floating  mb-3">
-                                                <input type="Nama" class="form-control" id="floatingNama" placeholder="Nama">
-                                                <label for="floatingNama">Nama Lengkap</label>
-                                            </div>
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                                <label for="floatingInput">Alamat Email</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                            <span class="text-dark fs-6 mr-4 mt-0">
-                                                <img src="https://www.udemy.com/staticx/udemy/images/v9/hpp-doku-ovo.svg" alt="" width="40px" class="mr-3 border border-secondary rounded">
-                                                <strong>OVO</strong>
-                                            </span>
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div class="form-floating  mb-3">
-                                                <input type="Nama" class="form-control" id="floatingNama" placeholder="Nama">
-                                                <label for="floatingNama">Nama Lengkap</label>
-                                            </div>
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                                <label for="floatingInput">Alamat Email</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
