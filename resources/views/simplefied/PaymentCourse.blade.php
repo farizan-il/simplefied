@@ -32,6 +32,16 @@
                                             <div class="accordion-body" id="formSection">
                                                 <form id="paymentForm">
                                                     <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ Auth::user()->id }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $pay->id }} - payment id" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->id }} - kegiatan id" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->title }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->namaKategori }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="{{ $kegiatan->harga }}" required>
+                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" value="pending" required>
+                                                        <label for="floatingNama">Nama</label>
+                                                    </div>
+                                                    <div class="form-floating mb-3">
                                                         <input type="text" class="form-control" id="floatingNama" placeholder="Nama" required>
                                                         <label for="floatingNama">Nama Lengkap</label>
                                                     </div>

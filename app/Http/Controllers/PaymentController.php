@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Kegiatan;
 use App\Models\Modul;
 use App\Models\Payment;
@@ -45,8 +46,16 @@ class PaymentController extends Controller
     {
         $payment = Payment::all();
         $kegiatan = Kegiatan::find($id);
+        $kategori = Kategori::all();
         $modul = Modul::where('id_kegiatan', $id)->get();
         $user = UserCredentials::find($id);
+
+        if ($kegiatan->id_kategori == $Kategori->) {
+            # code...
+        } else {
+            # code...
+        }
+        
 
         return view('simplefied.PaymentCourse', [
             'title' => 'Payment Kursus',
