@@ -26,26 +26,29 @@
                                             </span>
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                        data-bs-parent="#accordionExample">
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         {{-- isi form terlebih dahulu --}}
-                                        {{-- <div class="accordion-body">
-                                            <div class="form-floating  mb-3">
-                                                <input type="Nama" class="form-control" id="floatingNama" placeholder="Nama">
-                                                <label for="floatingNama">Nama Lengkap</label>
-                                            </div>
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                                <label for="floatingInput">Alamat Email</label>
-                                            </div>
-                                        </div> --}}
-
+                                        <div class="accordion-body" id="formSection">
+                                            <form id="paymentForm">
+                                                <div class="form-floating mb-3">
+                                                    <input type="text" class="form-control" id="floatingNama" placeholder="Nama" required>
+                                                    <label for="floatingNama">Nama Lengkap</label>
+                                                </div>
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                                    <label for="floatingInput">Alamat Email</label>
+                                                    <div id="emailHelp" class="form-text">Modul kursus akan dikirim ke alamat email tersebut</div>
+                                                </div>
+                                                <button class="btn bg-dark mt-2 col-3 text-white mt-4" type="submit">Submit</button>
+                                            </form>
+                                        </div>
+                                    
                                         {{-- informasi pembayaran --}}
-                                        <div class="accordion-body">
+                                        <div class="accordion-body" id="paymentInfo" style="display: none;">
                                             <p class="text-dark"><strong class="text-danger">Catatan: </strong>Jika anda telah selesai membayar, <strong>upload bukti pembayaran</strong> di form yang sudah tersedia. Selesaikan pembayaran Anda dalam waktu 48 jam. Setelah pembayaran disetujui, butuh waktu hingga 30 menit untuk mengirimkan kursus ke akun Simplefied Anda.</p>
                                             <!-- File Upload Section -->
-                                            <div class="mt-4">
-                                                <h6>Upload Bukti Pembayaran</h6>
+                                            <div class="mt-5">
+                                                <h6 class="fw-bold">Upload Bukti Pembayaran</h6>
                                                 <form action="/upload_payment_proof" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
                                                     <div class="flex-grow-1">
                                                         <input class="form-control me-2" type="file" id="formFile" name="paymentProof">
@@ -64,13 +67,14 @@
                                                             <button class="btn btn-outline-secondary" type="button" onclick="copyText('1236227400635225')">Salin</button>
                                                         </div>
                                                     </div>
-                                                    <p class="text-dark  ">Tanggal Kedaluwarsa: <strong> 03/08/2024</strong></p>
-                                                    <p class="text-dark  mt-0">Nama Pembeli: <strong>  zan zan </strong></p>
-                                                    <p class="text-dark  mt-0">Merchant: <strong>  Simplefied </strong></p>
+                                                    <p class="text-dark">Tanggal Kedaluwarsa: <strong> 03/08/2024</strong></p>
+                                                    <p class="text-dark mt-0">Nama Pembeli: <strong> zan zan </strong></p>
+                                                    <p class="text-dark mt-0">Merchant: <strong> Simplefied </strong></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                                                       
                                 </div>
 
                                 <div class="accordion-item">
@@ -257,4 +261,32 @@
             });
         }
     </script>
+
+    {{-- script untuk payment informasi agar terlihat setelah mengisi form --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('paymentForm');
+            const formSection = document.getElementById('formSection');
+            const paymentInfo = document.getElementById('paymentInfo');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Hide the form section
+                formSection.style.display = 'none';
+
+                // Show the payment information section
+                paymentInfo.style.display = 'block';
+            });
+        });
+    
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Teks telah disalin!');
+            }, function(err) {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        }
+    </script>
+    
 @endsection

@@ -95,6 +95,9 @@
         
         @yield('content-payment')
 
+        <footer class="mb-4 bg-white">
+
+        </footer>
         
 
         <!-- jQuery -->

@@ -60,6 +60,7 @@ class SimplefiedController extends Controller
      */
     public function edit(string $id)
     {
+        $user = UserCredentials::find($id);
         $kegiatan = Kegiatan::with('kategori')->find($id);
         $modul = Modul::all();
         $submodul = DetailModul::all();
@@ -78,7 +79,8 @@ class SimplefiedController extends Controller
             'submodul' => $submodul,
             'syarat' => $syarat,
             'halKiri' => $halKiri,
-            'halKanan' => $halKanan
+            'halKanan' => $halKanan,
+            'user' => $user
         ]);
     }
 

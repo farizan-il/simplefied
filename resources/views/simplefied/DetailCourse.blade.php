@@ -224,7 +224,7 @@
                             <div class="total mt-3">
                                 <div class="main-border-button bg-dark"><a href="#" style="font-size: 15px"><strong class="text-white">Tambahkan ke keranjang</strong></a></div>
                                 <div class="main-border-button mt-2 button-hover">
-                                    <a href="{{ route('simplefied.show', $kursus->id) }}" style="font-size: 15px"><strong>Beli sekarang</strong></a>
+                                    <a href="{{ route('payment.show', $kursus->id) }}" style="font-size: 15px"><strong>Beli sekarang</strong></a>
                                 </div>
                                     <span class="text-dark"><strong>Garansi 30 hari</strong></span>
                                 </div>
