@@ -23,6 +23,4 @@ class UserProfile extends Model
     public function role(){
         return $this->belongsTo(UserRole::class, 'role_id', 'id');
     }
-
-
 }

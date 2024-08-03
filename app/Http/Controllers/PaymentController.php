@@ -9,6 +9,7 @@ use App\Models\Payment;
 use App\Models\Transaksi;
 use App\Models\UserCredentials;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
@@ -33,7 +34,7 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         $ValidatedData = $request->validate([
-            'id_credentials' => 'required|max:255',
+            // 'id_credentials' => 'required|max:255',
             'payment' => 'required|max:255',
             'kegiatan' => 'required',
             'title' => 'required',
@@ -45,8 +46,8 @@ class PaymentController extends Controller
         ]);
 
         $addTransaksi = Transaksi::create([
-            'user_credentials_id' =>$ValidatedData['id_credentials'],
-            'payment_id' =>$ValidatedData['payment'],
+            'user_credentials_id' => Auth::user()->id,
+            'payment_id' => $ValidatedData['payment'],
             'namaPelanggan' => $ValidatedData['nama'],
             'emailPelanggan' => $ValidatedData['email'],
             'kegiatan_id' => $ValidatedData['kegiatan'],

@@ -42,7 +42,7 @@
                                             <div class="card border-primary mt-4">
                                                 <div class="card-body">
                                                     <p class="card-title text-dark mt-0">Terima kasih atas pembelian Anda. Silakan gunakan informasi berikut untuk menyelesaikan pembayaran.</p>
-                                                    <p class="card-text text-primary fs-6"><strong>Rp{{ number_format(($transaksi->harga), 0, ',', '.') }}</strong></p>
+                                                    <p class="card-text text-primary fs-6"><strong>Rp{{ number_format(($transaksi->harga)-($kegiatan->harga*50/100), 0, ',', '.') }}</strong></p>
                                                     {{-- <p class="card-text text-primary fs-6"><strong>{{ number_format(($kursus->harga)-($kursus->harga*50/100), 0, ',', '.') }}</strong></p> --}}
                                                     <div class="mb-2 mt-3">
                                                         <strong class="text-dark">Referensi Pembayaran:</strong>

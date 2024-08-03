@@ -141,7 +141,7 @@
                                                     <li><a href="{{ route('simplefied.edit', $item->id) }}"><i class="fa fa-eye"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $item->foto }}" alt="">
+                                            <img src="http://localhost/web-cms-simplefied/public/images/kursus-sampul/{{ $item->foto }}" alt="{{ $item->foto }}">
                                         </div>
                                         <div class="down-content">
                                             <h5><strong>{{ $item->title }}</strong></h5>

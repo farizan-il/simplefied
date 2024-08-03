@@ -33,12 +33,11 @@
                                                 <form id="paymentForm" action="/payment" method="POST">
                                                     @csrf
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="id_credentials" value="{{ Auth::user()->id }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="payment" value="{{ $pay->id }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="kegiatan" value="{{ $kegiatan->id }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="title" value="{{ $kegiatan->title }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="kategori" value="{{ $kategori }}" required>
-                                                        <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="harga" value="{{ $kegiatan->harga }}" required>
+                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="payment" value="{{ $pay->id }}" required>
+                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="kegiatan" value="{{ $kegiatan->id }}" required>
+                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="title" value="{{ $kegiatan->title }}" required>
+                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="kategori" value="{{ $kategori }}" required>
+                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="harga" value="{{ $kegiatan->harga }}" required>
                                                     </div>
                                                     <div class="form-floating mb-3">
                                                         <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="nama" required>
@@ -136,7 +135,7 @@
                             </div>
                             <div class="payment mt-5 mb-3">
                                 <span class="text-secondary"><small>Dengan menyelesaikan pembelian, Anda menyetujui <a href="">Persyaratan Layanan ini</a></small></span>
-                                <button class="btn bg-dark mt-2 col-12 text-white" type="submit">Selesaikan Checkout</button>
+                                <button class="btn bg-dark mt-2 col-12 text-white disabled" type="submit">Selesaikan Checkout</button>
                             </div>
                         </div>
                     </div>
