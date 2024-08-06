@@ -37,7 +37,7 @@
                                                         <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="kegiatan" value="{{ $kegiatan->id }}" required>
                                                         <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="title" value="{{ $kegiatan->title }}" required>
                                                         <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="kategori" value="{{ $kategori }}" required>
-                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="harga" value="{{ $kegiatan->harga }}" required>
+                                                        <input type="hidden" class="form-control" id="floatingNama" placeholder="Nama" name="harga" value="{{ ($kegiatan->harga)-($kursus->harga*50/100) }}" required>
                                                     </div>
                                                     <div class="form-floating mb-3">
                                                         <input type="text" class="form-control" id="floatingNama" placeholder="Nama" name="nama" required>

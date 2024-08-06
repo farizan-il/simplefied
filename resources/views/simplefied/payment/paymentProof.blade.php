@@ -9,6 +9,13 @@
     <section class="section" id="product" style="margin-top: 145px">
         <div class="container">
             <div class="row">
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show col-12" role="alert">
+                        {!! session('success') !!}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                            aria-label="Close"></button>
+                    </div>
+                @endif
                 {{-- detail payment --}}
                 <h4 class="fs-2"><strong>Checkout</strong></h4>
                 <div class="col-lg-8">
@@ -32,13 +39,15 @@
                                             <p class="text-dark"><strong class="text-danger">Catatan: </strong>Jika anda telah selesai membayar, <strong>upload bukti pembayaran</strong> di form yang sudah tersedia. Selesaikan pembayaran Anda dalam waktu 48 jam. Setelah pembayaran disetujui, butuh waktu hingga 30 menit untuk mengirimkan kursus ke akun Simplefied Anda.</p>
                                             <div class="mt-5">
                                                 <h6 class="fw-bold">Upload Bukti Pembayaran</h6>
-                                                <form action="/upload_payment_proof" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
+                                                <form action="{{ route('payment.update', $transaksi->id) }}" method="post" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
+                                                    @csrf
+                                                    @method('PUT')
                                                     <div class="flex-grow-1">
                                                         <input class="form-control me-2" type="file" id="formFile" name="paymentProof">
                                                     </div>
                                                     <button type="submit" class="btn btn-secondary">Kirim</button>
                                                 </form>
-                                            </div>
+                                            </div>                                            
                                             <div class="card border-primary mt-4">
                                                 <div class="card-body">
                                                     <p class="card-title text-dark mt-0">Terima kasih atas pembelian Anda. Silakan gunakan informasi berikut untuk menyelesaikan pembayaran.</p>
@@ -85,7 +94,7 @@
 
                 {{-- card pembelian kursus --}}
                 <div class="col-lg-4 purchase-card shadow-sm  p-3 mt-0" style="max-height: 336px; position: sticky; top: 100px;">
-                    <div class="left-images">
+                    <div class="left-images mb-5">
                         <div class="down-content">
                             <span class="fw-bold d-inline" style="font-size: 26px">Ringkasan</span>
                             <div class="total mt-3">

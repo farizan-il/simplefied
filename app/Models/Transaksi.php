@@ -21,6 +21,7 @@ class Transaksi extends Model
         'namaKursus',
         'kategoriKursus',
         'harga',
+        'buktitransaksi',
         'status'
     ];
 

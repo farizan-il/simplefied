@@ -122,7 +122,29 @@ class PaymentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $transaksi = Transaksi::findOrFail($id);
+
+        // Validasi file upload
+        $request->validate([
+            'paymentProof' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048', // Atur aturan validasi sesuai kebutuhan
+        ]);
+
+        // Simpan file upload jika ada
+        if ($request->hasFile('paymentProof')) {
+            $file = $request->file('paymentProof');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            
+            // Menggunakan path absolut untuk menyimpan file di htdocs/web-cms-simplefied/public/transaksi-image
+            $destinationPath = base_path('../web-cms-simplefied/public/transaksi-image/');
+            $file->move($destinationPath, $filename);
+
+            // Simpan nama file di database
+            $transaksi->buktitransaksi = $filename;
+        }
+
+        $transaksi->save();
+
+        return redirect()->back()->with('success', 'Bukti pembayaran Anda telah diperbarui. Mohon tunggu beberapa menit untuk validasi dari admin. Terima kasih atas kepercayaan Anda. <strong>Klik selesaikan checkout untuk kembali</strong>');
     }
 
     /**
