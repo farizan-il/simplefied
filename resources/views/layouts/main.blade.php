@@ -153,10 +153,17 @@
                                     </li>
                                     
                                     @if (Auth::check())
+
                                         <li>
-                                            <a href="/cart" class="" style="text-decoration: none; color: inherit;">
-                                                <i class="fa fa-shopping-cart" style="font-size: 20px;"></i>
-                                            </a>
+                                            <button type="button" class="btn btn-lgiht btn-sm position-relative">
+                                                <a href="/cart" class="p-0" style="text-decoration: none; color: inherit;">
+                                                    <i class="fa fa-shopping-cart" style="font-size: 20px;"></i>
+                                                </a>
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    99+ <span class="visually-hidden">unread messages</span>
+                                                </span>
+                                            </button>
+                                            
                                         </li>
                                         <li class="submenu scroll-to-section">
                                             <a href="javascript:;" class="btn border py-0 text-dark">{{ \Illuminate\Support\Str::limit(Auth::user()->username, 15, '...') }}</a>
