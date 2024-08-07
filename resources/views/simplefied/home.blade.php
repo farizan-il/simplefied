@@ -137,7 +137,14 @@
                                             <div class="hover-content">
                                                 <ul>
                                                     <li><a href="detail-course"><i class="fa fa-star"></i></a></li>
-                                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li>
+                                                        <a href="#" onclick="event.preventDefault(); document.getElementById('add-to-cart-form-{{ $item->id }}').submit();">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </a>
+                                                    </li>
+                                                    <form id="add-to-cart-form-{{ $item->id }}" action="{{ route('add.to.cart', $item->id) }}" method="POST" style="display: none;">
+                                                        @csrf
+                                                    </form>
                                                     <li><a href="{{ route('simplefied.edit', $item->id) }}"><i class="fa fa-eye"></i></a></li>
                                                 </ul>
                                             </div>
@@ -153,7 +160,9 @@
                                                 <li><i class="fa fa-star text-warning mr-1"></i></li>
                                                 <li><i class="fa fa-star text-warning mr-1"></i></li>
                                                 <li><i class="fa fa-star text-secondary mr-1"></i></li>
-                                                <li><p class="fs-6 text-secondary mr-1">(16,210)</p></li>
+                                                @if ($item->transaksi_count > 0)
+                                                    <li><p class="fs-6 text-secondary mr-1">({{ $item->transaksi_count }} pendaftar)</p></li>
+                                                @endif
                                             </ul>
                                             <div class="d-flex mt-2">
                                                 <h6 class="fw-6 mr-2"><strong>Rp{{ number_format($item->harga-($item->harga*50/100), 0, ',', '.') }}</strong></h6>
@@ -164,6 +173,7 @@
                                 @endif
                             @endforeach
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -446,21 +456,15 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
-                        <div class="col-6">
-                            <ul>
-                                <li>Store Location:<br><span>Sunny Isles Beach, FL 33160, United States</span></li>
-                                <li>Phone:<br><span>010-020-0340</span></li>
-                                <li>Office Location:<br><span>North Miami Beach</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul>
-                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
-                                <li>Email:<br><span>info@company.com</span></li>
-                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a
-                                            href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
-                            </ul>
-                        </div>
+                        @foreach ($tentang as $item)
+                            @if ($item->isread == 1)
+                                <div class="col-6">
+                                    <ul>
+                                        <li>{{ $item->label }}:<br><span>{{ $item->data }}</span></li>
+                                    </ul>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>

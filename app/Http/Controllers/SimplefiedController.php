@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Kegiatan;
 use App\Models\DetailModul;
 use App\Models\Modul;
+use App\Models\Tentang;
 use App\Models\Transaksi;
 use App\Models\UserCredentials;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SimplefiedController extends Controller
 {
@@ -16,10 +18,33 @@ class SimplefiedController extends Controller
      */
     public function index()
     {
-        $kegiatan = Kegiatan::with('kategori')->get();
+        $tentang = Tentang::all();
+
+        $kegiatan = Kegiatan::with('kategori')
+            ->withCount(['transaksi' => function ($query) {
+                $query->where('status', 'lunas');
+            }])
+            ->get();
+
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+
+            // Dapatkan ID kegiatan yang sudah dibeli oleh pengguna
+            $boughtKursusIds = Transaksi::where('user_credentials_id', $userId)
+                ->where('status', 'lunas')
+                ->pluck('kegiatan_id')
+                ->toArray();
+
+            // Eksklusikan kursus yang sudah dibeli oleh pengguna
+            $kegiatan = $kegiatan->reject(function ($item) use ($boughtKursusIds) {
+                return in_array($item->id, $boughtKursusIds);
+            });
+        }
+
         return view('simplefied.home', [
             'title' => 'Simplefied | Home',
-            'kursus' => $kegiatan
+            'kursus' => $kegiatan,
+            'tentang' => $tentang,
         ]);
     }
 

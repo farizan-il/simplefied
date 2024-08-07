@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AutentifikasiController;
+use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\SimplefiedController;
 use App\Http\Controllers\VerifikasiController;
 use App\Http\Controllers\PaymentController;
+use App\Models\Keranjang;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,4 +36,6 @@ Route::middleware(['authAcess'])->group(function () {
     Route::resource('/payment', PaymentController::class);
     Route::get('/payment-proof/{id}', [PaymentController::class, 'paymentproof'])->name('payment.paymentproof');    
     Route::post('/logout', [AutentifikasiController::class, 'logout'])->name('logout');
+    Route::post('/add-to-cart/{id}', [KeranjangController::class, 'addToCart'])->name('add.to.cart');
+    Route::resource('/keranjang', KeranjangController::class);
 });

@@ -156,7 +156,7 @@
 
                                         <li>
                                             <button type="button" class="btn btn-lgiht btn-sm position-relative">
-                                                <a href="/cart" class="p-0" style="text-decoration: none; color: inherit;">
+                                                <a href="/keranjang" class="p-0" style="text-decoration: none; color: inherit;">
                                                     <i class="fa fa-shopping-cart" style="font-size: 20px;"></i>
                                                 </a>
                                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -180,8 +180,8 @@
                                             </ul>
                                         </li>
                                     @else
-                                        <li class="scroll-to-section"><a href="#login" class="btn border py-0 text-dark">Masuk</a></li>
-                                        <li class="scroll-to-section"><a href="#register" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
+                                        <li class="scroll-to-section"><a href="/login" class="btn border py-0 text-dark">Masuk</a></li>
+                                        <li class="scroll-to-section"><a href="/register" class="btn btn-dark py-0"><span class="text-white">Daftar</span></a></li>
                                     @endif
                                 </ul>        
                                 <a class='menu-trigger'>

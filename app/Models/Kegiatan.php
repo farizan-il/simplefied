@@ -14,6 +14,7 @@ class Kegiatan extends Model
 
     protected $fillable = [
         'id_kategori',
+        'user_credentials_id',
         'title',
         'subtitle',
         'harga',
@@ -26,5 +27,13 @@ class Kegiatan extends Model
 
     public function kategori (){
         return $this->belongsTo(Kategori::class, 'id_kategori', 'id');
+    }
+
+    public function credentials (){
+        return $this->belongsTo(UserCredentials::class, 'user_credentials_id', 'id');
+    }
+
+    public function transaksi (){
+        return $this->hasMany(Transaksi::class, 'kegiatan_id');
     }
 }
