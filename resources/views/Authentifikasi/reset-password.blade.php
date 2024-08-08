@@ -32,10 +32,6 @@
         }
     </style>
 
-
-
-    </style>
-
     </head>
     
     <body>
@@ -63,7 +59,7 @@
 
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li class="scroll-to-section"><a href="">Batal</a></li>
+                                <li class="scroll-to-section"><a href="/login">Batal</a></li>
                             </ul>        
                             <a class='menu-trigger'>
                                 <span>Menu</span>
@@ -86,7 +82,7 @@
                             class="img-fluid" alt="Phone image">
                     </div>
                     <div class="col-md-7 col-lg-5 col-xl-6 offset-xl-1">
-                        @if (session()->has('error'))
+                        @if (session('error'))
                             <div class="alert mb-4 alert-warning alert-dismissible fade show" role="alert">
                                 {{ session('error') }}
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
@@ -101,75 +97,46 @@
                             </div>
                         @endif
                         <div class="shadow p-3 mb-5 bg-body rounded">
-                            <form action="{{ url('/login') }}" method="POST">
+                            <form action="{{ route('verifyOtp') }}" method="POST">
                                 @csrf
-                                <!-- Email input -->
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" name="email_username" placeholder="Masukan Email atau Username">
-                                    <label for="floatingInput">Email atau Username</label>
-                                </div>
-
-                                <!-- Password input -->
-                                <div class="form-floating mb-3 position-relative">
-                                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Masukan Kata Sandi">
-                                    <label for="floatingPassword">Kata Sandi</label>
-                                    <span class="position-absolute top-50 end-0 translate-middle-y me-3" style="cursor: pointer;" id="togglePassword">
-                                        <i class="fa-solid fa-eye" id="eyeIcon"></i>
-                                    </span>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-4">
-                                    <!-- Checkbox -->
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                                        <label class="form-check-label" for="form1Example3"> Ingatkan Saya </label>
+                                <input type="hidden" name="email" value="{{ session('email') }}" readonly>
+                                
+                                <!-- otp input -->
+                                <div class="col-12 mt-3">
+                                    <label for="inputotp" class="form-label" style="font-size: 14px">Kode OTP</label>
+                                    <div class="password-wrapper position-relative">
+                                        <input type="number" class="form-control" id="inputotp" name="otp" placeholder="Masukkan kode OTP" required>
                                     </div>
-                                    <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Lupa Password?</a>
+                                </div>
+                        
+                                <!-- Password input -->
+                                <div class="col-12 mt-3">
+                                    <label for="inputPassword" class="form-label" style="font-size: 14px">Kata Sandi</label>
+                                    <div class="password-wrapper position-relative">
+                                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Masukan Kata Sandi Anda">
+                                        <i class="fas fa-eye toggle-password position-absolute" onclick="togglePassword('inputPassword', this)" style="cursor: pointer; top: 50%; right: 10px; transform: translateY(-50%);"></i>
+                                    </div>
+                                </div>
+                                
+                                <!-- Konfirmasi Password input -->
+                                <div class="col-12 mt-3">
+                                    <label for="inputConfirmPassword" class="form-label" style="font-size: 14px">Konfirmasi Kata Sandi</label>
+                                    <div class="password-wrapper position-relative">
+                                        <input type="password" class="form-control" id="inputConfirmPassword" name="password_confirmation" placeholder="Konfirmasi Kata Sandi Baru">
+                                        <i class="fas fa-eye toggle-password position-absolute" onclick="togglePassword('inputConfirmPassword', this)" style="cursor: pointer; top: 50%; right: 10px; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
 
-                                <!-- Submit button -->
-                                <button type="submit" class="btn btn-dark btn-md btn-block">LOGIN</button>
-                                <a href="/register" class="btn btn-light border-secondary btn-md btn-block">DAFTAR</a>
-
-                                <div class="divider d-flex align-items-center my-4">
-                                    <p class="text-center fw-bold mx-3 mb-0 text-muted">atau</p>
+                                <div class="col-12 mt-3">
+                                    <button type="submit" class="btn btn-dark btn-sm">Reset Kata Sandi</button>
                                 </div>
-
-                                <a data-mdb-ripple-init class="btn btn-primary btn-md  btn-block" style="background-color: #3b5998" href="#!" role="button">
-                                    <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
-                                </a>
-                                <a data-mdb-ripple-init class="btn btn-primary btn-md  btn-block" style="background-color: #4285F4" href="#!" role="button">
-                                    <i class="fab fa-google me-2"></i> Continue with Google
-                                </a>
+                        
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Modal -->
-        <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="forgotPasswordModalLabel">Lupa Kata Sandi</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="forgotPasswordForm" action="{{ route('sendOtp') }}" method="POST">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="inputEmail" class="form-label">Masukkan Email Anda</label>
-                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
-                            </div>
-                            <button type="submit" class="btn btn-dark btn-sm">Kirim</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <script>
             document.getElementById('togglePassword').addEventListener('click', function () {

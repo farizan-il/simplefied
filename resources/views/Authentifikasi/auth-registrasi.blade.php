@@ -117,15 +117,21 @@
                                     <label for="inputNama" class="form-label" style="font-size: 14px">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="inputNama" name="nama" placeholder="Masukan Nama Lengkap">
                                 </div>
-                            
+                                
                                 <div class="col-12">
                                     <label for="inputPassword" class="form-label" style="font-size: 14px">Kata Sandi</label>
-                                    <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Masukan Kata Sandi Anda">
+                                    <div class="password-wrapper position-relative">
+                                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Masukan Kata Sandi Anda">
+                                        <i class="fas fa-eye toggle-password position-absolute" onclick="togglePassword('inputPassword', this)" style="cursor: pointer; top: 50%; right: 10px; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
-                            
-                                <div class="col-md-8">
+                                
+                                <div class="col-md-8 mt-3">
                                     <label for="inputConfirmPassword" class="form-label" style="font-size: 14px">Konfirmasi Kata Sandi</label>
-                                    <input type="password" class="form-control" id="inputConfirmPassword" name="password_confirmation">
+                                    <div class="password-wrapper position-relative">
+                                        <input type="password" class="form-control" id="inputConfirmPassword" name="password_confirmation">
+                                        <i class="fas fa-eye toggle-password position-absolute" onclick="togglePassword('inputConfirmPassword', this)" style="cursor: pointer; top: 50%; right: 10px; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
                             
                                 <div class="col-md-4">
@@ -151,14 +157,27 @@
             </div>
         </section>
 
-        
+        <script>
+            function togglePassword(inputId, icon) {
+                var input = document.getElementById(inputId);
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                } else {
+                    input.type = "password";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                }
+            }
+            </script>
 
         <!-- jQuery -->
-        <script src="{{ asset ('assets/js/jquery-2.1.0.min.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <!-- Bootstrap -->
         <script src="{{ asset ('assets/js/popper.js') }}"></script>
-        <script src="{{ asset ('assets/js/bootstrap.min.js') }}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
         <!-- Plugins -->
         <script src="{{ asset ('assets/js/owl-carousel.js') }}"></script>

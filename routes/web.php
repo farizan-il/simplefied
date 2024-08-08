@@ -7,6 +7,7 @@ use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\SimplefiedController;
 use App\Http\Controllers\VerifikasiController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ResetSandiController;
 use App\Models\Keranjang;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,11 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [AutentifikasiController::class, 'login']);
     Route::resource('/register', RegistrasiController::class);
     Route::resource('/verifikasi', VerifikasiController::class);
+
+    Route::resource('/resetpassword', ResetSandiController::class);
+    Route::post('/send-otp', [ResetSandiController::class, 'sendOtp'])->name('sendOtp');
+    Route::post('/verify-otp', [ResetSandiController::class, 'verifyOtp'])->name('verifyOtp');
+
 });
 
 // harus login dulu

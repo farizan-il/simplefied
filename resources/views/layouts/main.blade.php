@@ -111,6 +111,18 @@
                 font-weight: bold;
                 color: #007bff; /* Ganti dengan warna aktif sesuai kebutuhan */
             }
+
+            /* register */
+            .password-wrapper {
+                position: relative;
+            }
+            .password-wrapper .toggle-password {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
         </style>
 
     </head>
