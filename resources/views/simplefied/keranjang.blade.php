@@ -2,7 +2,7 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container">
+<div class="container mt-5">
     <h1>Keranjang Belanja</h1>
     @if ($keranjang->isEmpty())
         <p>Keranjang Anda kosong.</p>

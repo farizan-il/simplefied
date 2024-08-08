@@ -16,7 +16,7 @@
                                 <h4>We Are Simplefied</h4>
                                 <span>Temukan beragam kursus online yang komprehensif dan menarik</span>
                                 <div class="main-border-button">
-                                    <a href="#">Daftar Sekarang!</a>
+                                    <a href="#">Temukan Kursus!</a>
                                 </div>
                             </div>
                             <img src="assets/images/left-banner.png" alt="">
@@ -173,7 +173,6 @@
                                 @endif
                             @endforeach
                         </div>
-                        
                     </div>
                 </div>
             </div>

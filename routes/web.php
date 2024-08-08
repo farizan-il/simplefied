@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AutentifikasiController;
+use App\Http\Controllers\DaftarKursusController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\SimplefiedController;
@@ -38,4 +39,5 @@ Route::middleware(['authAcess'])->group(function () {
     Route::post('/logout', [AutentifikasiController::class, 'logout'])->name('logout');
     Route::post('/add-to-cart/{id}', [KeranjangController::class, 'addToCart'])->name('add.to.cart');
     Route::resource('/keranjang', KeranjangController::class);
+    Route::resource('/daftarkursus', DaftarKursusController::class);
 });

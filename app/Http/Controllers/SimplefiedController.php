@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kegiatan;
 use App\Models\DetailModul;
+use App\Models\Keranjang;
 use App\Models\Modul;
 use App\Models\Tentang;
 use App\Models\Transaksi;
