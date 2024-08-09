@@ -23,6 +23,7 @@ class ResetSandiController extends Controller
         return view('authentifikasi.reset-password', compact('email'));
     }
 
+    // UBAH AGAR KETIKA OTP NYA SALAH, DI MENAMPILKAN ALERT SALAH
 
     public function sendOtp(Request $request)
     {

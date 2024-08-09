@@ -140,7 +140,7 @@
         <!-- ***** Preloader End ***** -->
         
         <!-- ***** Header Area Start ***** -->
-        <header class="header-area header-sticky">
+        <header class="header-area header-sticky mb-0">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -212,9 +212,9 @@
         
         <!-- ***** Footer Start ***** -->
         <footer>
-            <div class="container-xxl">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="first-item">
                             <div class="logo">
                                 <img src="assets/images/white-logo.png" alt="">
@@ -244,8 +244,8 @@
                             <li><a href="#">Kontak Kami</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3">
-                        <h4>Bantuan &amp; Informasi</h4>
+                    <div class="col-lg-2">
+                        <h4>Informasi</h4>
                         <ul>
                             <li><a href="#">Bantuan</a></li>
                             <li><a href="#">FAQ</a></li>
@@ -288,7 +288,9 @@
             </div>
         </div>
 
-        
+        @yield('script');
+
+
 
         <!-- jQuery -->
         <script src="{{ asset ('assets/js/jquery-2.1.0.min.js') }}"></script>
